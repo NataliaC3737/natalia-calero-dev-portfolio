@@ -1,62 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #d96b28;
+  --secondary-color: #9a6a52;
+  --background-color: #faf7f4;
+  --surface-color: #f5f2e7;
+  --border-color: #c8c3b0;
+
+  --brown-coffee: #6a4532; 
+  --brown-dark: #593825;
+  --brown-muted: #b89e8d;
+
+  --foreground-color: #171717;
+  --afacad-font-family: "Afacad", sans-serif;
+  --bagel-font-family: "Bagel Fat One";
 }
 
-$afacad-font-family: "Afacad", sans-serif;
+[data-theme="dark"] {
+  --primary-color: #d68c36;
+  --secondary-color: #d6c2a6;
+  --background-color: #1c1c1c;
+  --surface-color: #272624;
+  --border-color: #a1725f;
 
-.bagel-fat-one-regular {
-  font-family: "Bagel Fat One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-.afacad-regular {
-  font-family: $afacad-font-family;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.afacad-medium {
-  font-family: $afacad-font-family;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-.afacad-semibold {
-  font-family: $afacad-font-family;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-.afacad-bold {
-  font-family: $afacad-font-family;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
+  --brown-coffee: #e3d9d3;
+  --brown-dark: #c0b8a7;
+  --brown-muted: #bfa8a0; 
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  --foreground-color: #e3d9d3;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .bg-background-color {
+    background-color: var(--background-color);
   }
+}
+@layer base {
+  body {
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+html:not([data-theme]) {
+  visibility: hidden;
 }
