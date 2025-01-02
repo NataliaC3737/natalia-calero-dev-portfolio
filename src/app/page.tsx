@@ -1,6 +1,6 @@
 import SectionLayout from "@/components/templates/sections/SectionLayout";
 import DrawnArrow from "@/components/atoms/icons/drawnArrow";
-import Button from "@/components/atoms/Button";
+import Button from "@/components/atoms/Button/Button";
 import Image from "next/image";
 import "./home.scss";
 
