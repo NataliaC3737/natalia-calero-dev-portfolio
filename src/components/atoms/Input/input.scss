@@ -1,0 +1,56 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  .label {
+    @apply text-brown-coffee;
+    font-family: var(--afacad);
+    font-size: 16px;
+  }
+
+  .input,
+  .textarea {
+    font-family: var(--afacad);
+    font-size: 16px;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 1px solid var(--brown-coffee);
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    background-color: transparent;
+    &::placeholder {
+      @apply text-brown-muted;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:active,
+    &:not(:placeholder-shown) {
+      @apply text-primary;
+
+      @apply text-primary;
+    }
+    &:disabled {
+      &::placeholder {
+        @apply text-brown-coffee;
+      }
+    }
+  }
+
+  .textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .error {
+    border-color: #e63946;
+  }
+
+  .errorMessage {
+    color: #e63946;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}
