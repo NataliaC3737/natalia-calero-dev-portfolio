@@ -1,3 +1,6 @@
 .section {
   padding: clamp(2rem, 12vw, 10rem);  /* 12vw allows aggressive scaling, max 12rem for huge screens */
+  &::-webkit-scrollbar {
+    display: none;  // Para Chrome, Safari y Opera
+  }
 }
