@@ -1,4 +1,5 @@
+import ContactView from "@/components/pages/ContactView";
 import "./contact.scss";
 export default function Contact() {
-  return <div></div>;
+  return <ContactView/>;
 }
