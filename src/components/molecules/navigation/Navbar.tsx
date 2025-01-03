@@ -1,7 +1,7 @@
+import LanguageToggle from "@/components/atoms/toggles/LanguageToggle";
+import { ThemeToggle } from "@/components/atoms/toggles/ThemeToggle";
 import Link from "next/link";
-import { ThemeToggle } from "../atoms/toggles/ThemeToggle";
 import { usePathname } from "next/navigation";
-import LanguageToggle from "../atoms/toggles/LanguageToggle";
 
 export default function Navbar() {
   const currentPath = usePathname();
@@ -41,7 +41,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-        <LanguageToggle/>
+        <LanguageToggle />
         <ThemeToggle />
       </div>
     </nav>
