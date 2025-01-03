@@ -8,6 +8,7 @@ export default function Button({
   goTo,
   isLink,
   className,
+  type = "button",
 }: {
   variant: "primary" | "outlined" | "empty";
   children: ReactNode;
@@ -15,6 +16,7 @@ export default function Button({
   goTo?: string;
   isLink?: boolean;
   className?: string;
+  type?: "button" | "submit" | "reset" | undefined;
 }) {
   return (
     <div
@@ -30,7 +32,7 @@ export default function Button({
           {children}
         </Link>
       ) : (
-        <button className={`${className}`} onClick={onClick}>
+        <button className={`${className}`} onClick={onClick} type={type}>
           {children}
         </button>
       )}
