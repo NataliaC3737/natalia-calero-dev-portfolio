@@ -2,7 +2,7 @@
 import { Afacad, Bagel_Fat_One } from "next/font/google";
 import { ThemeProvider } from "@/context/themeContext";
 // import type { Metadata } from "next";
-import Navbar from "@/components/molecules/Navbar";
+import Navbar from "@/components/molecules/navigation/Navbar";
 import "./globals.scss";
 import MarginLines from "@/components/atoms/MarginLines/MarginLines";
 import { usePathname } from "next/navigation";

@@ -7,7 +7,7 @@ import LinkedinIcon from "../atoms/icons/linkedinIcon";
 import ExperienceCard from "../molecules/cards/ExperienceCard";
 import { IExperience } from "@/types/interfaces/data.interface";
 import TechStackCard from "../molecules/cards/TechStackCard";
-// import Footer from "../molecules/Footer";
+// import Footer from "../molecules/navigation/Footer";
 
 export default function AboutMeView() {
   const experienceData = [
