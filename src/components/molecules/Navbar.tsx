@@ -7,7 +7,7 @@ export default function Navbar() {
   const currentPath = usePathname();
   console.log("currentPath", currentPath);
   return (
-    <nav className="fixed top-0 px-32 py-5 w-full flex items-center justify-between border-b border-b-primary">
+    <nav className="fixed top-0 px-32 py-5 w-full flex items-center justify-between border-b border-b-primary backdrop-blur-xl">
       <Link
         href={"/"}
         className="text-brown-coffee font-bagel-fat-one text-2xl"
@@ -41,8 +41,8 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-      <LanguageToggle/>
-      <ThemeToggle />
+        <LanguageToggle/>
+        <ThemeToggle />
       </div>
     </nav>
   );
