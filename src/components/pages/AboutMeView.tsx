@@ -7,7 +7,7 @@ import LinkedinIcon from "../atoms/icons/linkedinIcon";
 import ExperienceCard from "../molecules/cards/ExperienceCard";
 import { IExperience } from "@/types/interfaces/data.interface";
 import TechStackCard from "../molecules/cards/TechStackCard";
-import Footer from "../molecules/Footer";
+// import Footer from "../molecules/Footer";
 
 export default function AboutMeView() {
   const experienceData = [
@@ -77,12 +77,10 @@ export default function AboutMeView() {
           <p className="text-xl text-brown-coffee font-afacad">
             Here are a few <strong>technologies</strong> I’ve been working with
             recently:
-            {/* TypeScript, React, Tailwind, Next.js, Postman, Express.js,
-          MongoDB, MySQL */}
           </p>
           <div className="flex gap-4">
-            {techStackData.map((d: string) => (
-              <TechStackCard text={d} />
+            {techStackData.map((d: string, index: number) => (
+              <TechStackCard key={index} text={d} />
             ))}
           </div>
         </div>

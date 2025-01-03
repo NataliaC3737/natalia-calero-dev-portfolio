@@ -1,7 +1,7 @@
 "use client";
 import { Afacad, Bagel_Fat_One } from "next/font/google";
 import { ThemeProvider } from "@/context/themeContext";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import Navbar from "@/components/molecules/Navbar";
 import "./globals.scss";
 import MarginLines from "@/components/atoms/MarginLines/MarginLines";

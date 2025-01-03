@@ -4,10 +4,11 @@ import ES from "@/data/es.json";
 import EN from "@/data/en.json";
 
 type Language = "ES" | "EN";
+type TranslationData = typeof ES | typeof EN;
 
 interface LanguageContextType {
   language: Language;
-  translations: Record<string, any>;
+  translations: TranslationData;
   toggleLanguage: () => void;
 }
 

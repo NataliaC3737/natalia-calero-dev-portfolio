@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 
 export default function Footer() {
