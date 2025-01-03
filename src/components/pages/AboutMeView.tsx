@@ -71,7 +71,7 @@ export default function AboutMeView() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-20">
         <Heading>My tech stack</Heading>
         <div className="flex flex-col gap-6">
           <p className="text-xl text-brown-coffee font-afacad">
