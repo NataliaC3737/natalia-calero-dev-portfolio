@@ -1,5 +1,5 @@
 export default function TechIcons({
-  selectedIcon,
+  selectedIcon = "TypeScript",
   size = 24,
 }: {
   selectedIcon: string;

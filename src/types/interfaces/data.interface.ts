@@ -13,7 +13,7 @@ export interface IProject {
   description: string;
   origin: string;
   dateDeployed: string;
-  links: { web: string; repo: string };
+  links: { web: string; repo: string; project: string };
 }
 
 export interface FormData {
