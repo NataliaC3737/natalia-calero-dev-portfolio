@@ -5,14 +5,14 @@
   width: 100%;
 
   .label {
-    @apply text-brown-coffee;
-    font-family: var(--afacad);
+    color: var(--brown-coffee);
+    font-family: var(--font-afacad);
     font-size: 16px;
   }
 
   .input,
   .textarea {
-    font-family: var(--afacad);
+    font-family: var(--font-afacad);
     font-size: 16px;
     padding: 8px 12px;
     border: none;
@@ -21,20 +21,18 @@
     transition: border-color 0.3s ease;
     background-color: transparent;
     &::placeholder {
-      @apply text-brown-muted;
+      color: var(--brown-muted);
     }
     &:focus {
       outline: none;
     }
     &:active,
     &:not(:placeholder-shown) {
-      @apply text-primary;
-
-      @apply text-primary;
+      color: var(--primary-color);
     }
     &:disabled {
       &::placeholder {
-        @apply text-brown-coffee;
+        color: var(--brown-coffee);
       }
     }
   }

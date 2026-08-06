@@ -10,10 +10,10 @@ export default function ContactView() {
     <SectionLayout>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col">
-          <Heading>Let's connect</Heading>
+          <Heading>Let&rsquo;s connect</Heading>
           <p className="text-brown-coffee text-lg font-afacad">
-            Whether you’re looking for a developer to collaborate with or just
-            want to chat about tech, feel free to reach out. I’m always open to
+            Whether you&rsquo;re looking for a developer to collaborate with or just
+            want to chat about tech, feel free to reach out. I&rsquo;m always open to
             new opportunities and exciting projects.
           </p>
         </div>
