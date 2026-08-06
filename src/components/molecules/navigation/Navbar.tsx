@@ -1,3 +1,4 @@
+"use client";
 import LanguageToggle from "@/components/atoms/toggles/LanguageToggle";
 import { ThemeToggle } from "@/components/atoms/toggles/ThemeToggle";
 import Link from "next/link";
@@ -5,9 +6,8 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const currentPath = usePathname();
-  console.log("currentPath", currentPath);
   return (
-    <nav className="fixed top-0 px-32 py-5 w-full flex items-center justify-between border-b border-b-primary backdrop-blur-xl">
+    <nav className="fixed top-0 z-50 px-32 py-5 w-full flex items-center justify-between border-b border-b-primary backdrop-blur-xl">
       <Link
         href={"/"}
         className="text-brown-coffee font-bagel-fat-one text-2xl"

@@ -22,7 +22,7 @@ export default function ProjectCard({
     >
       <Image
         src="/projectCover.png"
-        alt="project cover"
+        alt=""
         width={180}
         height={140}
         className="w-full"
@@ -42,7 +42,7 @@ export default function ProjectCard({
                 <p className="font-afacad text-xs text-brown-coffee">
                   {data.origin}
                 </p>
-                <span className="h-4 w-[1px] bg-border" />
+                <span className="h-4 w-px bg-border" />
                 <p className="font-afacad text-xs text-secondary">
                   {data.dateDeployed}
                 </p>

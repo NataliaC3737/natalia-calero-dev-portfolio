@@ -1,3 +1,4 @@
+"use client";
 import SectionLayout from "@/components/templates/sections/SectionLayout";
 import DrawnArrow from "@/components/atoms/icons/drawnArrow";
 import Button from "@/components/atoms/Button/Button";
@@ -29,9 +30,12 @@ export default function HomeView() {
           </div>
           <Image
             src={"/coconut.png"}
-            alt="Coconut photo"
+            alt=""
             width={400}
             height={400}
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = "none";
+            }}
           />
         </div>
       </div>

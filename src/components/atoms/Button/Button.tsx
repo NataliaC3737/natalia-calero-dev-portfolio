@@ -18,24 +18,30 @@ export default function Button({
   className?: string;
   type?: "button" | "submit" | "reset" | undefined;
 }) {
+  const baseClasses =
+    "py-1 px-4 rounded-full w-fit font-afacad inline-block text-center";
+
+  const variantClasses = {
+    primary: "bg-primary text-surface",
+    outlined: "border border-primary text-primary bg-surface",
+    empty: "text-brown-coffee",
+  }[variant];
+
+  const classes = [className, baseClasses, variantClasses]
+    .filter(Boolean)
+    .join(" ");
+
+  if (isLink && goTo) {
+    return (
+      <Link href={goTo} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <div
-      className={`${className} py-1 px-4 rounded-full w-fit font-afacad ${
-        variant === "primary" && "bg-primary text-surface"
-      } ${
-        variant === "outlined" && "border boder-primary text-primary bg-surface"
-      } ${variant === "empty" && "text-brown-coffee"}
-    `}
-    >
-      {isLink ? (
-        <Link href={goTo!} className={`${className}`}>
-          {children}
-        </Link>
-      ) : (
-        <button className={`${className}`} onClick={onClick} type={type}>
-          {children}
-        </button>
-      )}
-    </div>
+    <button className={classes} onClick={onClick} type={type}>
+      {children}
+    </button>
   );
 }
