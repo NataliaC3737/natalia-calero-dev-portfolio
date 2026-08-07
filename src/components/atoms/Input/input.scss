@@ -1,54 +1,53 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   width: 100%;
 
   .label {
     color: var(--brown-coffee);
     font-family: var(--font-afacad);
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
   }
 
   .input,
   .textarea {
     font-family: var(--font-afacad);
-    font-size: 16px;
-    padding: 8px 12px;
-    border: none;
-    border-bottom: 1px solid var(--brown-coffee);
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-    background-color: transparent;
+    font-size: 15px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--background-color);
+    color: var(--brown-coffee);
     &::placeholder {
       color: var(--brown-muted);
     }
     &:focus {
       outline: none;
-    }
-    &:active,
-    &:not(:placeholder-shown) {
-      color: var(--primary-color);
-    }
-    &:disabled {
-      &::placeholder {
-        color: var(--brown-coffee);
-      }
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px var(--warm-glow);
     }
   }
 
   .textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
   }
 
-  .error {
-    border-color: #e63946;
+  &.error {
+    .input,
+    .textarea {
+      border-color: #e63946;
+    }
   }
 
   .errorMessage {
     color: #e63946;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    font-family: var(--font-afacad);
   }
 }

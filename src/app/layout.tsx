@@ -33,7 +33,7 @@ export default function RootLayout({
   const currentPath = usePathname();
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bagelFatOne.variable} ${afacad.variable}`}>
+      <body className={`${bagelFatOne.variable} ${afacad.variable}`} suppressHydrationWarning>
         <LanguageProvider>
           <ThemeProvider>
             <MarginLines isHome={currentPath === "/"} />

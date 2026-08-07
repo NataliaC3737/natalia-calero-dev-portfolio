@@ -1,38 +1,49 @@
-import OpenLinkIcon from "@/components/atoms/icons/openLinkIcon";
+"use client";
+import { motion } from "framer-motion";
 import Tag from "@/components/atoms/Tag/Tag";
 import { IExperience } from "@/types/interfaces/data.interface";
-import Link from "next/link";
+import { BriefcaseIcon } from "lucide-react";
 
-export default function ExperienceCard({ data }: { data: IExperience }) {
+export default function ExperienceCard({
+  data,
+  index = 0,
+}: {
+  data: IExperience;
+  index?: number;
+}) {
   return (
-    <div className="p-5 flex gap-8 hover:bg-surface rounded-lg">
-      <p className="min-w-36 text-base text-secondary font-afacad">
-        {data.dateRange}
-      </p>
-      <div className="flex flex-col gap-5">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <p className="text-base text-brown-coffee font-bold font-afacad">
-              {data.jobPosition}
-            </p>
-            <div className="bg-brown-coffee inline-flex items-center w-1 h-1 rounded-full" />
-            <p className="text-base text-brown-coffee font-bold font-afacad">
-              {data.company}
-            </p>
-            <Link href={`https://changetheblock.com/`} target="blank">
-              <OpenLinkIcon />
-            </Link>
-          </div>
-          <p className="text-base text-brown-coffee font-afacad">
-            {data.description}
+    <motion.div
+      className="relative pl-8 pb-8 border-l-2 border-border/60 last:pb-0"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, delay: index * 0.15, ease: "easeOut" }}
+    >
+      <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-linear-to-br from-primary to-gradient-end flex items-center justify-center">
+        <BriefcaseIcon className="w-3 h-3 text-white" />
+      </div>
+      <div className="bg-surface rounded-xl p-5 border border-border/30 hover:border-primary/20 transition-colors duration-200">
+        <p className="text-xs font-semibold text-primary font-afacad tracking-wide uppercase mb-2">
+          {data.dateRange}
+        </p>
+        <div className="flex items-baseline gap-2 mb-3">
+          <h3 className="text-lg font-bold text-brown-dark font-afacad">
+            {data.jobPosition}
+          </h3>
+          <span className="text-brown-muted font-afacad">·</span>
+          <p className="text-base text-brown-muted font-afacad">
+            {data.company}
           </p>
         </div>
-        <div className="flex gap-2">
-          {data.skills.map((d: string, index: number) => (
-            <Tag key={index}>{d}</Tag>
+        <p className="text-sm text-brown-coffee font-afacad leading-relaxed mb-4">
+          {data.description}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {data.skills.map((skill: string, i: number) => (
+            <Tag key={i}>{skill}</Tag>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

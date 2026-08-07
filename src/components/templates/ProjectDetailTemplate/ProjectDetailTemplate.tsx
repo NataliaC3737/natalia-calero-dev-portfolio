@@ -1,87 +1,136 @@
-import Heading from "@/components/atoms/Heading/Heading";
+"use client";
+import { motion } from "framer-motion";
+import Tag from "@/components/atoms/Tag/Tag";
 import SectionLayout from "../sections/SectionLayout";
-import TechStackCard from "@/components/molecules/cards/TechStackCard";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" as const },
+  }),
+};
 
 export default function ProjectDetailTemplate() {
-  const techStackData = [
-    "Python",
-    "Tensorflow",
-    "Keras",
+  const techStackData = ["Python", "Tensorflow", "Keras"];
+  const characteristics = [
+    {
+      num: "01",
+      title: "From handwriting to PDF",
+      desc: "In this project you could have the opportunity to not waste time transporting your thoughts from paper to digital. Just take a photo and the app will do the rest.",
+    },
+    {
+      num: "02",
+      title: "Smart character recognition",
+      desc: "Built on a neural network trained on thousands of handwriting samples, achieving high accuracy across diverse writing styles.",
+    },
+    {
+      num: "03",
+      title: "Export anywhere",
+      desc: "Export your notes as PDF, Markdown, or plain text. Works offline and syncs when you reconnect.",
+    },
   ];
+
   return (
     <SectionLayout>
-      <div>
-        <Heading>Project title</Heading>
-        <p>
-          Welcome to my digital space! As a passionate web developer and data
-          scientist, I thrive on creating dynamic and intuitive web experiences.
-          With a background in both frontend and backend development, I
-          specialize in API integration, data analysis, and building sleek,
-          responsive interfaces. I’m constantly learning, adapting, and aiming
-          to add value to every project I touch.
-        </p>
-      </div>
-      <div>
-        <Heading>Characteristics</Heading>
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-10 pb-10 border-b border-brown-muted">
-            <span className="text-xl">01.</span>
-            <h3 className="text-3xl min-w-[250px] font-bagel-fat-one text-brown-coffee">
-              From handwriting to pdf
-            </h3>
-            <p>
-              In this project you could have the oportunity to not waste time
-              transporting you thought from paper to digital. Just take a photo
-              and the app will do the rest. Following the same steps you could
-              have a pdf with all your notes.
-            </p>
-          </div>
-          <div className="flex gap-10 pb-10 border-b border-brown-muted">
-            <span className="text-xl">02.</span>
-            <h3 className="text-3xl min-w-[250px] font-bagel-fat-one text-brown-coffee">
-              From handwriting to pdf
-            </h3>
-            <p>
-              In this project you could have the oportunity to not waste time
-              transporting you thought from paper to digital. Just take a photo
-              and the app will do the rest. Following the same steps you could
-              have a pdf with all your notes.
-            </p>
-          </div>
-          <div className="flex gap-10 pb-10">
-            <span className="text-xl">03.</span>
-            <h3 className="text-3xl min-w-[250px] font-bagel-fat-one text-brown-coffee">
-              From handwriting to pdf
-            </h3>
-            <p>
-              In this project you could have the oportunity to not waste time
-              transporting you thought from paper to digital. Just take a photo
-              and the app will do the rest. Following the same steps you could
-              have a pdf with all your notes.
-            </p>
-          </div>
-          <div className="flex gap-10 py-10 border-t border-brown-muted">
-            <span className="text-xl">04.</span>
-            <h3 className="text-3xl min-w-[250px] font-bagel-fat-one text-brown-coffee">
-              From handwriting to pdf
-            </h3>
-            <p>
-              In this project you could have the oportunity to not waste time
-              transporting you thought from paper to digital. Just take a photo
-              and the app will do the rest. Following the same steps you could
-              have a pdf with all your notes.
-            </p>
-          </div>
+      <motion.div
+        className="max-w-4xl mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+      <motion.div
+        className="mb-16"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0}
+      >
+        <div className="flex items-center gap-3 text-sm text-brown-muted mb-4">
+          <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold font-afacad text-xs uppercase tracking-wide">
+            Project
+          </span>
+          <span className="w-1 h-1 rounded-full bg-border" />
+          <span className="font-afacad">May 2024</span>
         </div>
-      </div>
-      <div>
-        <Heading>Tech stack</Heading>
-        <div className="flex gap-4">
-          {techStackData.map((d: string, index: number) => (
-            <TechStackCard key={index} text={d} />
+        <h1 className="text-4xl lg:text-5xl font-bagel-fat-one text-brown-dark leading-tight mb-6">
+          Character recognition with{" "}
+          <span className="bg-linear-to-r from-primary to-gradient-end bg-clip-text text-transparent">
+            Neural Networks
+          </span>
+        </h1>
+        <p className="text-lg text-brown-coffee font-afacad leading-relaxed max-w-3xl">
+          A project that pushed the boundaries of my knowledge during my Professional Degree.
+          Using Python, Keras, and TensorFlow, I developed a neural network for character
+          recognition, diving deep into machine learning research and applying it to solve
+          real-world challenges.
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="mb-16"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={0}
+      >
+        <h2 className="text-2xl font-bagel-fat-one text-brown-dark mb-8">
+          Characteristics
+        </h2>
+        <div className="flex flex-col gap-6">
+          {characteristics.map((c, i) => (
+            <motion.div
+              key={c.num}
+              className="flex gap-6 pb-6 border-b border-border/40 last:border-0"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i}
+            >
+              <span className="text-3xl font-bagel-fat-one text-primary/30 min-w-15">
+                {c.num}
+              </span>
+              <div>
+                <h3 className="text-xl font-bold text-brown-dark font-afacad mb-2">
+                  {c.title}
+                </h3>
+                <p className="text-base text-brown-coffee font-afacad leading-relaxed">
+                  {c.desc}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
+
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={0}
+      >
+        <h2 className="text-2xl font-bagel-fat-one text-brown-dark mb-6">
+          Tech stack
+        </h2>
+        <div className="flex flex-wrap gap-3">
+          {techStackData.map((tech: string, i: number) => (
+            <motion.div
+              key={tech}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+            >
+              <Tag>{tech}</Tag>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
     </SectionLayout>
   );
 }

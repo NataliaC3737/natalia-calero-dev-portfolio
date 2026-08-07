@@ -10,7 +10,7 @@ export default function Button({
   className,
   type = "button",
 }: {
-  variant: "primary" | "outlined" | "empty";
+  variant: "primary" | "outlined" | "empty" | "gradient";
   children: ReactNode;
   onClick?: () => void;
   goTo?: string;
@@ -19,12 +19,13 @@ export default function Button({
   type?: "button" | "submit" | "reset" | undefined;
 }) {
   const baseClasses =
-    "py-1 px-4 rounded-full w-fit font-afacad inline-block text-center";
+    "py-2.5 px-6 rounded-full font-afacad text-sm font-semibold tracking-wide inline-block text-center transition-all duration-200";
 
   const variantClasses = {
-    primary: "bg-primary text-surface",
-    outlined: "border border-primary text-primary bg-surface",
-    empty: "text-brown-coffee",
+    primary: "bg-primary text-white hover:bg-gradient-end shadow-md hover:shadow-lg hover:-translate-y-0.5",
+    outlined: "border-2 border-primary/60 text-primary hover:border-primary hover:bg-primary/5",
+    empty: "text-brown-muted hover:text-brown-coffee",
+    gradient: "text-white bg-gradient-to-r from-primary to-gradient-end shadow-md hover:shadow-lg hover:-translate-y-0.5",
   }[variant];
 
   const classes = [className, baseClasses, variantClasses]

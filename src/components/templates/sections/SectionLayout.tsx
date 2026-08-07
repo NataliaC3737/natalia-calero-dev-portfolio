@@ -1,14 +1,16 @@
+"use client";
 import { ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
-import "./sectionLayout.scss";
+import { motion } from "framer-motion";
 
 export default function SectionLayout({ children }: { children: ReactNode }) {
   return (
-    <section className="section flex flex-col gap-32 h-screen overflow-y-scroll relative">
-      {children}
-      <div className="sticky bottom-8 flex justify-center pointer-events-none animate-bounce">
-        <ChevronDown className="text-brown-muted w-6 h-6" />
-      </div>
-    </section>
+    <motion.section
+      className="section min-h-screen overflow-y-auto relative pt-24 pb-16 px-8 lg:px-16"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="max-w-6xl mx-auto">{children}</div>
+    </motion.section>
   );
 }

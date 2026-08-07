@@ -2,9 +2,11 @@ import TechIcons from "@/components/atoms/icons/techIcons";
 
 export default function TechStackCard({ text }: { text: string }) {
   return (
-    <div className="w-[150px] h-[150px] flex flex-col items-center justify-center gap-2 bg-surface rounded-lg border border-brown-muted">
-      <TechIcons selectedIcon={text} size={40}/>
-      <p className="text-sm font-afacad font-bold text-brown-coffee">{text}</p>
+    <div className="flex items-center gap-3 px-4 py-2.5 bg-surface rounded-xl border border-border/30 hover:border-primary/30 hover:bg-primary/5 transition-all duration-200">
+      <TechIcons selectedIcon={text} size={22} />
+      <p className="text-sm font-medium text-brown-coffee font-afacad">
+        {text}
+      </p>
     </div>
   );
 }

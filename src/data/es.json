@@ -1,3 +1,129 @@
 {
-  "locale": "es"
+  "locale": "es",
+  "nav": { "about": "Sobre mí", "projects": "Proyectos", "contact": "Contacto" },
+  "home": {
+    "greeting": "Hola, me llamo",
+    "role": "Desarrolladora full-stack e ingeniera de IA — creo experiencias web inteligentes que unen IA de vanguardia con código listo para producción.",
+    "getInTouch": "Contáctame",
+    "downloadResume": "Descargar CV"
+  },
+  "about": {
+    "profile": "Perfil profesional",
+    "profileText": "Desarrolladora Full-stack especializada en la intersección del desarrollo web moderno (MERN stack) y la Inteligencia Artificial. Me apasiona el potencial de los datos y el desafío de optimizar y desplegar modelos avanzados de IA en aplicaciones del mundo real. Busco unirme a equipos dinámicos y trabajar en proyectos inspiradores donde pueda abordar desafíos complejos de ingeniería y construir soluciones de alto impacto.",
+    "journey": "Mi trayectoria",
+    "education": "Formación",
+    "skills": "Habilidades e idiomas",
+    "contact": "Contáctame",
+    "experience": [
+      {
+        "dateRange": "04.2025 - Actualidad",
+        "jobPosition": "Desarrolladora Full-stack & IA (MERN)",
+        "company": "YoTramito",
+        "description": "Desarrollo de nuevas funcionalidades con React.js, Node.js y PostgreSQL, centrándome en la refactorización constante y las mejores prácticas de código limpio. Aplicación de conocimientos avanzados de IA para integrar soluciones web innovadoras. Implementación de optimización de rendimiento, pruebas de funcionalidades y mantenimiento de flujos de trabajo en Make.com con integraciones de APIs externas.",
+        "skills": ["React", "Node.js", "PostgreSQL", "IA", "Make.com", "TypeScript"]
+      },
+      {
+        "dateRange": "10.2024 - 03.2025",
+        "jobPosition": "Desarrolladora Full-stack & Web3",
+        "company": "ChangeTheBlock",
+        "description": "Desarrollé interfaces optimizadas, integré APIs de terceros y trabajé con tecnologías blockchain (Web3, smart contracts y wallets). Procesé Big Data para limpieza, análisis y visualización de datos. Diseñé y mantuve arquitecturas backend usando patrones MVC.",
+        "skills": ["React", "Next.js", "Web3", "Blockchain", "Big Data", "TypeScript"]
+      },
+      {
+        "dateRange": "10.2023 - 10.2024",
+        "jobPosition": "Desarrolladora Full-stack en prácticas",
+        "company": "ChangeTheBlock",
+        "description": "Creé aplicaciones web con React.js y Next.js, integrando APIs y desarrollando backends con Node.js y Express. Implementé autenticación segura de usuarios y diseñé interfaces intuitivas y fáciles de usar para presentar datos complejos.",
+        "skills": ["React", "Next.js", "Node.js", "Express.js", "TypeScript"]
+      }
+    ],
+    "educationList": [
+      {
+        "dateRange": "03.2026 - 07.2026",
+        "title": "Máster en IA Avanzada",
+        "institution": "MIOTI, Madrid",
+        "description": "Especialización en el diseño de soluciones híbridas complejas, optimización de modelos y su puesta en producción. Inmersión profunda en IA Agentica, Deep Learning, Machine Learning, Visión por Computador, PLN, IA Generativa y Reinforcement Learning. Proyecto final integrando desarrollo web con modelos avanzados de IA.",
+        "skills": ["Deep Learning", "PLN", "Visión por Computador", "IA Generativa", "IA Agentica"]
+      },
+      {
+        "dateRange": "06.2025 - 08.2025",
+        "title": "Curso de IA Aplicada",
+        "institution": "Ironhack, Madrid",
+        "description": "Enfoque en IA Generativa, análisis de datos y automatización de procesos con Make.com. Experiencia práctica en Power Query, ingeniería de prompts e integraciones de IA personalizadas alineadas con marcos éticos y normativas de cumplimiento.",
+        "skills": ["IA Generativa", "Ingeniería de Prompts", "Make.com", "Análisis de Datos"]
+      },
+      {
+        "dateRange": "10.2022 - 05.2024",
+        "title": "Diploma Profesional en Computación & IA",
+        "institution": "MSMK University, Madrid",
+        "description": "Completé un Higher National Diploma (Pearson HND) en Computación e IA, graduándome con Distinción. Adquirí una base sólida en ingeniería de software, bases de datos, desarrollo web y seguridad, explorando big data, cloud computing y machine learning.",
+        "skills": ["Ingeniería de Software", "Machine Learning", "Cloud Computing", "Big Data"]
+      }
+    ],
+    "techStack": ["TypeScript", "React", "Node.js", "Next.js", "Express.js", "Python", "MongoDB", "PostgreSQL", "Docker", "TensorFlow", "Keras", "Azure"],
+    "spanish": "Español",
+    "english": "Inglés",
+    "native": "Nativo",
+    "professional": "B2 (Profesional)",
+    "driversLicense": "Carné de conducir"
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "list": [
+      {
+        "image": "/projectCover.png",
+        "title": "Plataforma Web con IA — TFM",
+        "description": "Proyecto final que fusiona desarrollo web con modelos avanzados de IA. Construí una plataforma lista para producción que integra modelos de deep learning en una experiencia full-stack completa usando el stack MERN.",
+        "origin": "TFM",
+        "dateDeployed": "2026",
+        "links": { "web": "", "repo": "", "project": "/projects/neural-net" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "YoTramito — Desarrollo de Plataforma Full-stack",
+        "description": "Desarrollé nuevas funcionalidades y proporcioné soporte técnico para una plataforma en producción usando React.js, Node.js y PostgreSQL. Enfoque en código limpio, optimización de rendimiento e integración de funcionalidades impulsadas por IA.",
+        "origin": "Profesional",
+        "dateDeployed": "2025",
+        "links": { "web": "", "repo": "", "project": "/projects/psico-anguna" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "dApp Blockchain — Integración Web3",
+        "description": "Desarrollé interfaces integrando tecnologías blockchain (Web3, smart contracts y wallets) en ChangeTheBlock. Procesé Big Data e implementé arquitecturas backend MVC.",
+        "origin": "Profesional",
+        "dateDeployed": "2024",
+        "links": { "web": "", "repo": "", "project": "/projects/ideas-weave" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "Reconocimiento de Caracteres con Redes Neuronales",
+        "description": "Usando Python, Keras y TensorFlow, desarrollé una red neuronal para reconocimiento de caracteres como parte del Diploma Profesional. Investigación profunda en machine learning aplicada a desafíos del mundo real.",
+        "origin": "Universidad",
+        "dateDeployed": "2024",
+        "links": { "web": "", "repo": "", "project": "/projects/craft-mate" }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Conectemos",
+    "text": "Si buscas una desarrolladora para colaborar o solo quieres hablar sobre tecnología, no dudes en contactarme. Siempre estoy abierta a nuevas oportunidades y proyectos emocionantes.",
+    "findMe": "Encuéntrame en",
+    "form": {
+      "fromLabel": "De",
+      "fromPlaceholder": "tu.email@ejemplo.com",
+      "toLabel": "Para",
+      "toPlaceholder": "caleronatalia3737@gmail.com",
+      "subjectLabel": "Asunto",
+      "subjectPlaceholder": "p.ej., Propuesta de colaboración",
+      "messageLabel": "Tu mensaje",
+      "messagePlaceholder": "¿En qué proyecto estás trabajando?",
+      "send": "Enviar mensaje"
+    },
+    "items": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "phone": "Teléfono"
+    }
+  }
 }

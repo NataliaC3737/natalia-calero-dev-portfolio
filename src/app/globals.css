@@ -15,6 +15,10 @@
   --color-brown-coffee: var(--brown-coffee);
   --color-brown-dark: var(--brown-dark);
   --color-brown-muted: var(--brown-muted);
+  --color-warm-glow: var(--warm-glow);
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-end: var(--gradient-end);
+  --color-accent-light: var(--accent-light);
 }
 
 :root {
@@ -23,31 +27,75 @@
   --background-color: #faf7f4;
   --surface-color: #f5f2e7;
   --border-color: #c8c3b0;
-
   --brown-coffee: #6a4532;
   --brown-dark: #593825;
   --brown-muted: #b89e8d;
-
+  --warm-glow: rgba(217, 107, 40, 0.08);
+  --gradient-start: #d96b28;
+  --gradient-end: #b8561e;
+  --accent-light: #fdf6ee;
   --foreground-color: #171717;
   --afacad-font-family: "Afacad", sans-serif;
   --bagel-font-family: "Bagel Fat One";
 }
 
 [data-theme="dark"] {
-  --primary-color: #d68c36;
-  --secondary-color: #d6c2a6;
-  --background-color: #1c1c1c;
-  --surface-color: #272624;
-  --border-color: #a1725f;
+  --primary-color: #d96b28;
+  --secondary-color: #a88b7a;
+  --background-color: #181818;
+  --surface-color: #22201e;
+  --border-color: #8a6b5a;
+  --brown-coffee: #d4cdc8;
+  --brown-dark: #b0a8a2;
+  --brown-muted: #9a8e86;
+  --warm-glow: rgba(217, 107, 40, 0.12);
+  --gradient-start: #d96b28;
+  --gradient-end: #c05a1e;
+  --accent-light: #2a2826;
+  --foreground-color: #d4cdc8;
+}
 
-  --brown-coffee: #e3d9d3;
-  --brown-dark: #c0b8a7;
-  --brown-muted: #bfa8a0;
-
-  --foreground-color: #e3d9d3;
+html {
+  scroll-padding-top: 6rem;
 }
 
 body {
   background-color: var(--background-color);
+  color: var(--brown-coffee);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Vintage film grain overlay — light mode only */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+[data-theme="dark"] body::after {
+  opacity: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: white;
 }

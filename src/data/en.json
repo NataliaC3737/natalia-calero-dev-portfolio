@@ -1,3 +1,129 @@
 {
-  "locale": "en"
+  "locale": "en",
+  "nav": { "about": "About me", "projects": "Projects", "contact": "Get in touch" },
+  "home": {
+    "greeting": "Hi, my name is",
+    "role": "Full-stack developer & AI engineer — I build intelligent web experiences that bridge cutting-edge AI with production-ready code.",
+    "getInTouch": "Get in touch",
+    "downloadResume": "Download Resume"
+  },
+  "about": {
+    "profile": "Professional profile",
+    "profileText": "Full-stack Developer specializing in the intersection of modern web development (MERN stack) and Artificial Intelligence. I am passionate about the potential of data and love the challenge of optimizing and deploying advanced AI models into real-world applications. I am looking to join dynamic teams and work on inspiring projects where I can tackle complex engineering challenges and build high-impact solutions.",
+    "journey": "My journey",
+    "education": "Education",
+    "skills": "Skills & languages",
+    "contact": "Contact me",
+    "experience": [
+      {
+        "dateRange": "04.2025 - Present",
+        "jobPosition": "Full-stack & AI Developer (MERN)",
+        "company": "YoTramito",
+        "description": "Developing new features using React.js, Node.js, and PostgreSQL, focusing on constant refactoring and clean code best practices. Applied advanced AI knowledge to integrate innovative web solutions. Implemented performance optimization, feature testing, and maintained workflows in Make.com with external API integrations.",
+        "skills": ["React", "Node.js", "PostgreSQL", "AI", "Make.com", "TypeScript"]
+      },
+      {
+        "dateRange": "10.2024 - 03.2025",
+        "jobPosition": "Full-stack & Web3 Developer",
+        "company": "ChangeTheBlock",
+        "description": "Developed optimized interfaces, integrated third-party APIs, and worked with blockchain technologies (Web3, smart contracts, and wallets). Handled Big Data processing for data cleaning, analysis, and visualization. Designed and maintained backend architectures using MVC patterns.",
+        "skills": ["React", "Next.js", "Web3", "Blockchain", "Big Data", "TypeScript"]
+      },
+      {
+        "dateRange": "10.2023 - 10.2024",
+        "jobPosition": "Full-stack Developer Trainee",
+        "company": "ChangeTheBlock",
+        "description": "Built web applications using React.js and Next.js, integrating APIs and developing backends with Node.js and Express. Implemented secure user authentication and designed intuitive, user-friendly interfaces to present complex data.",
+        "skills": ["React", "Next.js", "Node.js", "Express.js", "TypeScript"]
+      }
+    ],
+    "educationList": [
+      {
+        "dateRange": "03.2026 - 07.2026",
+        "title": "Master's in Advanced AI",
+        "institution": "MIOTI, Madrid",
+        "description": "Specialized in designing complex hybrid solutions, optimizing models, and bringing them into production. Deep dive into Agentic AI, Deep Learning, Machine Learning, Computer Vision, NLP, Generative AI, and Reinforcement Learning. Capstone thesis merging web development with advanced AI models.",
+        "skills": ["Deep Learning", "NLP", "Computer Vision", "Generative AI", "Agentic AI"]
+      },
+      {
+        "dateRange": "06.2025 - 08.2025",
+        "title": "Applied AI Course",
+        "institution": "Ironhack, Madrid",
+        "description": "Focused on Generative AI, data analysis, and process automation using Make.com. Gained hands-on experience in Power Query, prompt engineering, and custom AI integrations aligned with ethical frameworks and compliance guidelines.",
+        "skills": ["Generative AI", "Prompt Engineering", "Make.com", "Data Analysis"]
+      },
+      {
+        "dateRange": "10.2022 - 05.2024",
+        "title": "Professional Diploma in Applied Computing & AI",
+        "institution": "MSMK University, Madrid",
+        "description": "Completed a Higher National Diploma (Pearson HND) in Computing and AI, graduating with Distinction. Acquired a robust foundation in software engineering, databases, web development, and security, while exploring big data, cloud computing, and machine learning.",
+        "skills": ["Software Engineering", "Machine Learning", "Cloud Computing", "Big Data"]
+      }
+    ],
+    "techStack": ["TypeScript", "React", "Node.js", "Next.js", "Express.js", "Python", "MongoDB", "PostgreSQL", "Docker", "TensorFlow", "Keras", "Azure"],
+    "spanish": "Spanish",
+    "english": "English",
+    "native": "Native",
+    "professional": "B2 (Professional)",
+    "driversLicense": "Driver's license"
+  },
+  "projects": {
+    "title": "Featured projects",
+    "list": [
+      {
+        "image": "/projectCover.png",
+        "title": "AI-powered Web Platform — Master's Thesis",
+        "description": "Capstone project merging web development with advanced AI models. Built a production-ready platform that integrates deep learning models into a seamless full-stack experience using the MERN stack.",
+        "origin": "Master's Thesis",
+        "dateDeployed": "2026",
+        "links": { "web": "", "repo": "", "project": "/projects/neural-net" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "YoTramito — Full-stack Platform Development",
+        "description": "Developed new features and provided technical support for a production platform using React.js, Node.js, and PostgreSQL. Focus on clean code, performance optimization, and AI-powered feature integration.",
+        "origin": "Professional",
+        "dateDeployed": "2025",
+        "links": { "web": "", "repo": "", "project": "/projects/psico-anguna" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "Blockchain dApp — Web3 Integration",
+        "description": "Developed interfaces integrating blockchain technologies (Web3, smart contracts, and wallets) at ChangeTheBlock. Handled Big Data processing and implemented MVC backend architectures.",
+        "origin": "Professional",
+        "dateDeployed": "2024",
+        "links": { "web": "", "repo": "", "project": "/projects/ideas-weave" }
+      },
+      {
+        "image": "/projectCover.png",
+        "title": "Character Recognition with Neural Networks",
+        "description": "Using Python, Keras, and TensorFlow, developed a neural network for character recognition as part of the Professional Diploma. Deep dived into machine learning research and applied it to real-world challenges.",
+        "origin": "College",
+        "dateDeployed": "2024",
+        "links": { "web": "", "repo": "", "project": "/projects/craft-mate" }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's connect",
+    "text": "Whether you're looking for a developer to collaborate with or just want to chat about tech, feel free to reach out. I'm always open to new opportunities and exciting projects.",
+    "findMe": "Find me on",
+    "form": {
+      "fromLabel": "From",
+      "fromPlaceholder": "your.email@example.com",
+      "toLabel": "To",
+      "toPlaceholder": "caleronatalia3737@gmail.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "e.g., Collaboration Inquiry",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "What project are you working on?",
+      "send": "Send message"
+    },
+    "items": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "phone": "Phone"
+    }
+  }
 }

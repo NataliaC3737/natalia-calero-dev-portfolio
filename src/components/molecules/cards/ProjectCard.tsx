@@ -1,76 +1,73 @@
+"use client";
+import { motion } from "framer-motion";
 import GithubIcon from "@/components/atoms/icons/githubIcon";
 import { IProject } from "@/types/interfaces/data.interface";
 import Image from "next/image";
-import { ArrowRightIcon, LinkIcon } from "lucide-react";
+import { ArrowRightIcon, ExternalLinkIcon, CalendarIcon, BookmarkIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function ProjectCard({
   data,
-  orientation = "horizontal",
-  hasExternalLink = true,
+  index = 0,
 }: {
   data: IProject;
-  orientation?: "vertical" | "horizontal";
-  hasExternalLink?: boolean;
+  index?: number;
 }) {
-  //TODO: Hacer reutilizable la parte de la fecha y el origen junto con los links
   return (
-    <div
-      className={`bg-surface rounded-lg flex gap-4 p-5 ${
-        orientation === "vertical" ? "flex-col" : "flex-row"
-      }`}
+    <motion.div
+      className="group bg-surface rounded-2xl overflow-hidden border border-border/40 hover:border-primary/30 transition-colors duration-300"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
     >
-      <Image
-        src="/projectCover.png"
-        alt=""
-        width={180}
-        height={140}
-        className="w-full"
-      />
-      <div className="flex flex-col gap-2 items-end">
-        <div className="flex flex-col gap-4">
-          <div
-            className={`flex gap-2 ${
-              orientation === "vertical" ? "flex-col-reverse" : "flex-col"
-            }`}
-          >
-            <h3 className="font-afacad text-base font-bold text-brown-coffee">
-              {data.title}
-            </h3>
-            <div className="flex justify-between items-center w-full">
-              <div className="flex gap-2 items-center">
-                <p className="font-afacad text-xs text-brown-coffee">
-                  {data.origin}
-                </p>
-                <span className="h-4 w-px bg-border" />
-                <p className="font-afacad text-xs text-secondary">
-                  {data.dateDeployed}
-                </p>
-              </div>
-              <div className="flex gap-1 items-center">
-                {hasExternalLink && (
-                  <Link href={data.links.web}>
-                    <LinkIcon className="text-brown-coffee w-5 h-5" />
-                  </Link>
-                )}
-                <Link href={data.links.repo}>
-                  <GithubIcon size={24} />
-                </Link>
-              </div>
-            </div>
-          </div>
-          <p className="font-afacad text-sm text-secondary line-clamp-4 ">
-            {data.description}
-          </p>
+      <div className="relative h-48 overflow-hidden bg-linear-to-br from-warm-glow to-surface">
+        <Image
+          src={data.image}
+          alt=""
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-surface/80 via-transparent to-transparent" />
+        <div className="absolute top-3 right-3 flex gap-2">
+          {data.links.web && (
+            <Link href={data.links.web} className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors">
+              <ExternalLinkIcon className="w-4 h-4 text-brown-coffee" />
+            </Link>
+          )}
+          {data.links.repo && (
+            <Link href={data.links.repo} className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors">
+              <GithubIcon size={16} />
+            </Link>
+          )}
         </div>
+      </div>
+      <div className="p-6 flex flex-col gap-4">
+        <div className="flex items-center gap-3 text-xs text-brown-muted">
+          <span className="flex items-center gap-1">
+            <BookmarkIcon className="w-3.5 h-3.5" />
+            {data.origin}
+          </span>
+          <span className="w-1 h-1 rounded-full bg-border" />
+          <span className="flex items-center gap-1">
+            <CalendarIcon className="w-3.5 h-3.5" />
+            {data.dateDeployed}
+          </span>
+        </div>
+        <h3 className="text-xl font-bold text-brown-dark font-afacad group-hover:text-primary transition-colors">
+          {data.title}
+        </h3>
+        <p className="text-sm text-brown-muted font-afacad leading-relaxed line-clamp-3">
+          {data.description}
+        </p>
         <Link
-          className="font-afacad text-sm text-primary flex gap-1 items-center hover:underline"
+          className="mt-auto font-afacad text-sm font-semibold text-primary flex items-center gap-2 hover:gap-3 transition-all"
           href={data.links.project}
         >
-          See more
-          <ArrowRightIcon className="text-primary w-4 h-4" />
+          View project
+          <ArrowRightIcon className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

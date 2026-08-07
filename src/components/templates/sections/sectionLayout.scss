@@ -1,8 +1,5 @@
 .section {
-  padding: clamp(2rem, 12vw, 8rem) clamp(2rem, 12vw, 10rem) 0;  
-  /* padding: [top] [left & right] [bottom]; */
-  
   &::-webkit-scrollbar {
-    display: none;  // Para Chrome, Safari y Opera
+    display: none;
   }
 }
