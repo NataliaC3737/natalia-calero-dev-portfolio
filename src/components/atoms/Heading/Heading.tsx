@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export default function Heading({
+export function Heading({
   children,
   gradient,
 }: {

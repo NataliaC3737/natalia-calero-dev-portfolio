@@ -1,4 +1,4 @@
-export default function LinkedinIcon({ size = 36 }: { size?: number }) {
+export function LinkedinIcon({ size = 36 }: { size?: number }) {
   return (
     <svg
       width={size}

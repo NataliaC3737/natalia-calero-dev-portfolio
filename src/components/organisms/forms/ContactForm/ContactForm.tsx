@@ -1,15 +1,15 @@
 "use client";
+import { Button, Input } from "@/components";
+import { useLanguage } from "@/context";
+import { FormData } from "@/types";
 import { useState } from "react";
-import { useLanguage } from "@/context/hooks/useLanguage";
-import Button from "@/components/atoms/Button/Button";
-import Input from "@/components/atoms/Input/Input";
-import { FormData } from "@/types/interfaces/data.interface";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-export default function ContactForm() {
+export function ContactForm() {
   const { translations, language } = useLanguage();
   const f = (translations as any).contact.form;
+
   const [sending, setSending] = useState(false);
 
   const locale = language === "EN" ? "EN" : "ES";
@@ -49,11 +49,47 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full">
       <div className="flex flex-col sm:flex-row gap-4">
-        <Input name="from" label={f.fromLabel} type="textField" placeholder={f.fromPlaceholder} register={register} error={errors.from?.message as any} required />
-        <Input name="to" label={f.toLabel} type="textField" placeholder={f.toPlaceholder} register={register} error={errors.to?.message as any} dissabled={true} />
+        <Input
+          name="from"
+          label={f.fromLabel}
+          type="textField"
+          placeholder={f.fromPlaceholder}
+          register={register}
+          error={errors.from?.message as any}
+          required
+        />
+
+        <Input
+          name="to"
+          label={f.toLabel}
+          type="textField"
+          placeholder={f.toPlaceholder}
+          register={register}
+          error={errors.to?.message as any}
+          disabled={true}
+        />
       </div>
-      <Input name="subject" label={f.subjectLabel} type="textField" placeholder={f.subjectPlaceholder} register={register} error={errors.subject?.message as any} required />
-      <Input name="message" label={f.messageLabel} type="textarea" placeholder={f.messagePlaceholder} register={register} error={errors.message?.message as any} required />
+
+      <Input
+        name="subject"
+        label={f.subjectLabel}
+        type="textField"
+        placeholder={f.subjectPlaceholder}
+        register={register}
+        error={errors.subject?.message as any}
+        required
+      />
+
+      <Input
+        name="message"
+        label={f.messageLabel}
+        type="textarea"
+        placeholder={f.messagePlaceholder}
+        register={register}
+        error={errors.message?.message as any}
+        required
+      />
+
       <Button
         type="submit"
         variant="gradient"

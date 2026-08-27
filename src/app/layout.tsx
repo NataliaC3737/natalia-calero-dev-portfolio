@@ -1,4 +1,4 @@
-import { metadata, viewport } from "@/lib/metadata";
+import { metadata, viewport } from "@/lib";
 import { Afacad, Bagel_Fat_One } from "next/font/google";
 import Providers from "../lib";
 import "./globals.css";

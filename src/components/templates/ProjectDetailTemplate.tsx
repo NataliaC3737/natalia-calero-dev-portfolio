@@ -1,12 +1,10 @@
 "use client";
+import { GithubIcon, SectionLayout, Tag } from "@/components";
+import { useLanguage } from "@/context";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Tag from "@/components/atoms/Tag/Tag";
-import SectionLayout from "../sections/SectionLayout";
-import { ExternalLink, ArrowLeft, Palette, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Palette, X } from "lucide-react";
 import Image from "next/image";
-import GithubIcon from "@/components/atoms/icons/githubIcon";
-import { useLanguage } from "@/context/hooks/useLanguage";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const fadeUp = {
@@ -18,7 +16,7 @@ const fadeUp = {
   }),
 };
 
-export default function ProjectDetailTemplate({ project }: { project: any }) {
+export function ProjectDetailTemplate({ project }: { project: any }) {
   const { translations } = useLanguage();
   const t = (translations as any).projectDetail;
   const [selectedMedia, setSelectedMedia] = useState<number | null>(null);
@@ -294,7 +292,9 @@ export default function ProjectDetailTemplate({ project }: { project: any }) {
                       alt={m.caption || ""}
                       fill
                       className={`transition-transform duration-300 group-hover:scale-[1.02] ${
-                        m.fit === "contain" ? "object-contain p-3" : "object-cover"
+                        m.fit === "contain"
+                          ? "object-contain p-3"
+                          : "object-cover"
                       }`}
                     />
                     {m.caption && (

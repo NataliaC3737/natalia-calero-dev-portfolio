@@ -1,14 +1,16 @@
 "use client";
+import {
+  Button,
+  ExperienceCard,
+  GithubIcon,
+  Heading,
+  LinkedinIcon,
+  SectionLayout,
+  TechStackCard,
+} from "@/components";
+import { useLanguage } from "@/context/hooks/useLanguage";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useLanguage } from "@/context/hooks/useLanguage";
-import Button from "../atoms/Button/Button";
-import Heading from "../atoms/Heading/Heading";
-import SectionLayout from "../templates/sections/SectionLayout";
-import GithubIcon from "../atoms/icons/githubIcon";
-import LinkedinIcon from "../atoms/icons/linkedinIcon";
-import ExperienceCard from "../molecules/cards/ExperienceCard";
-import TechStackCard from "../molecules/cards/TechStackCard";
 
 export default function AboutMeView() {
   const { translations } = useLanguage();

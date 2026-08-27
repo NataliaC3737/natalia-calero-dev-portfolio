@@ -1,4 +1,4 @@
-export default function TechIcons({
+export function TechIcons({
   selectedIcon = "TypeScript",
   size = 24,
 }: {

@@ -1,7 +1,7 @@
 "use client";
 import { Heart } from "lucide-react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer
       className={`absolute bottom-0 left-0 w-full py-5 border-t border-t-primary bg-background`}

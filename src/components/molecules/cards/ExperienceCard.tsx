@@ -1,10 +1,10 @@
 "use client";
+import { Tag } from "@/components";
+import { IExperience } from "@/types";
 import { motion } from "framer-motion";
-import Tag from "@/components/atoms/Tag/Tag";
-import { IExperience } from "@/types/interfaces/data.interface";
 import { BriefcaseIcon } from "lucide-react";
 
-export default function ExperienceCard({
+export function ExperienceCard({
   data,
   index = 0,
 }: {

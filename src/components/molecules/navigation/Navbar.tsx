@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
-import NavbarBrand from "./NavbarBrand";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+import { NavbarBrand, DesktopNav, MobileNav } from "@/components";
 
-export default function Navbar() {
+export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);

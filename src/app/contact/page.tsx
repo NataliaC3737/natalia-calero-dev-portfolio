@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactView from "@/components/pages/ContactView";
+import { ContactView } from "@/components";
 
 export const metadata: Metadata = {
   title: "Get in touch",

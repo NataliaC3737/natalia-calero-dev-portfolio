@@ -1,12 +1,15 @@
 "use client";
-import LanguageToggle from "@/components/atoms/toggles/LanguageToggle";
-import { ThemeToggle } from "@/components/atoms/toggles/ThemeToggle";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import {
+  LanguageToggle,
+  ThemeToggle,
+  navLinkClass,
+  navLinks,
+} from "@/components";
 import { useLanguage } from "@/context/hooks/useLanguage";
-import { navLinks, navLinkClass } from "./navLinks";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-export default function DesktopNav() {
+export function DesktopNav() {
   const currentPath = usePathname();
   const { translations } = useLanguage();
   const nav = (translations as any).nav;
@@ -14,7 +17,11 @@ export default function DesktopNav() {
   return (
     <div className="hidden lg:flex items-center gap-8">
       {navLinks.map(({ href, labelKey }) => (
-        <Link key={href} href={href} className={navLinkClass(href, currentPath)}>
+        <Link
+          key={href}
+          href={href}
+          className={navLinkClass(href, currentPath)}
+        >
           {nav[labelKey]}
         </Link>
       ))}

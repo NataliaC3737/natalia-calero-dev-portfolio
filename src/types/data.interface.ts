@@ -1,4 +1,4 @@
-import { UseFormRegister, FieldValues, FieldErrors } from "react-hook-form";
+import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 export interface IExperience {
   dateRange: string;
@@ -31,5 +31,5 @@ export interface InputProps {
   required?: boolean;
   register: UseFormRegister<any>;
   error?: FieldErrors<any>;
-  dissabled?: boolean | undefined;
+  disabled?: boolean | undefined;
 }

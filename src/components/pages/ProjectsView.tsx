@@ -1,9 +1,7 @@
 "use client";
+import { Heading, ProjectCard, SectionLayout } from "@/components";
+import { useLanguage } from "@/context";
 import { motion } from "framer-motion";
-import { useLanguage } from "@/context/hooks/useLanguage";
-import Heading from "../atoms/Heading/Heading";
-import ProjectCard from "../molecules/cards/ProjectCard";
-import SectionLayout from "../templates/sections/SectionLayout";
 
 export default function ProjectsView() {
   const { translations } = useLanguage();

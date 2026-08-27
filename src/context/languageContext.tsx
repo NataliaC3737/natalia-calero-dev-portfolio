@@ -1,7 +1,7 @@
 "use client";
-import React, { createContext, useState, ReactNode } from "react";
-import ES from "@/data/es.json";
 import EN from "@/data/en.json";
+import ES from "@/data/es.json";
+import { createContext, ReactNode, useState } from "react";
 
 type Language = "ES" | "EN";
 type TranslationData = typeof ES | typeof EN;
@@ -13,7 +13,7 @@ interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 // Object to hold language JSONs

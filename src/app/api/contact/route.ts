@@ -1,14 +1,6 @@
+import { contactSchema } from "@/components";
+import { sendContactEmails } from "@/lib";
 import { NextRequest, NextResponse } from "next/server";
-import { sendContactEmails } from "@/lib/email/send";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  from: z.string().regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Invalid email address"),
-  to: z.string(),
-  subject: z.string().min(1, "Subject is required"),
-  message: z.string().min(1, "Message is required"),
-  locale: z.enum(["EN", "ES"]).optional().default("ES"),
-});
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,7 +10,7 @@ export async function POST(request: NextRequest) {
     if (!parsed.success) {
       return NextResponse.json(
         { error: parsed.error.issues[0]?.message || "Validation failed" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -30,8 +22,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Contact form error:", error);
 
-    const message =
-      error instanceof Error ? error.message : "Unexpected error";
+    const message = error instanceof Error ? error.message : "Unexpected error";
 
     return NextResponse.json({ error: message }, { status: 500 });
   }

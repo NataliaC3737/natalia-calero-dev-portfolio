@@ -2,7 +2,7 @@
 import { useLanguage } from "@/context/hooks/useLanguage";
 import { Languages } from "lucide-react";
 
-export default function LanguageToggle() {
+export function LanguageToggle() {
   const { toggleLanguage, language } = useLanguage();
 
   return (

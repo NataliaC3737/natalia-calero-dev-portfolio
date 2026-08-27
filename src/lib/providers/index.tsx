@@ -1,11 +1,8 @@
 "use client";
-import { ReactNode, useEffect } from "react";
-import MarginLines from "@/components/atoms/MarginLines/MarginLines";
-import Navbar from "@/components/molecules/navigation/Navbar";
-import { LanguageProvider } from "@/context/languageContext";
-import { ThemeProvider } from "@/context/themeContext";
-import { useLanguage } from "@/context/hooks/useLanguage";
+import { MarginLines, Navbar } from "@/components";
+import { LanguageProvider, ThemeProvider, useLanguage } from "@/context";
 import { usePathname } from "next/navigation";
+import { ReactNode, useEffect } from "react";
 import { Toaster } from "sonner";
 
 function LangSync() {

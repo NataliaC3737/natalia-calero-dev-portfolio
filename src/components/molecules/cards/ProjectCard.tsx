@@ -1,13 +1,18 @@
 "use client";
+import { GithubIcon } from "@/components";
+import { useLanguage } from "@/context";
+import { IProject } from "@/types/data.interface";
 import { motion } from "framer-motion";
-import GithubIcon from "@/components/atoms/icons/githubIcon";
-import { IProject } from "@/types/interfaces/data.interface";
+import {
+  ArrowRightIcon,
+  BookmarkIcon,
+  CalendarIcon,
+  ExternalLinkIcon,
+} from "lucide-react";
 import Image from "next/image";
-import { ArrowRightIcon, ExternalLinkIcon, CalendarIcon, BookmarkIcon } from "lucide-react";
 import Link from "next/link";
-import { useLanguage } from "@/context/hooks/useLanguage";
 
-export default function ProjectCard({
+export function ProjectCard({
   data,
   index = 0,
 }: {
@@ -34,12 +39,18 @@ export default function ProjectCard({
         <div className="absolute inset-0 bg-linear-to-t from-surface/80 via-transparent to-transparent" />
         <div className="absolute top-3 right-3 flex gap-2">
           {data.links.web && (
-            <Link href={data.links.web} className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors">
+            <Link
+              href={data.links.web}
+              className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors"
+            >
               <ExternalLinkIcon className="w-4 h-4 text-brown-coffee" />
             </Link>
           )}
           {data.links.repo && (
-            <Link href={data.links.repo} className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors">
+            <Link
+              href={data.links.repo}
+              className="p-2 bg-surface/80 backdrop-blur-sm rounded-full hover:bg-primary/10 transition-colors"
+            >
               <GithubIcon size={16} />
             </Link>
           )}

@@ -1,13 +1,12 @@
 "use client";
-import LanguageToggle from "@/components/atoms/toggles/LanguageToggle";
-import { ThemeToggle } from "@/components/atoms/toggles/ThemeToggle";
+import { LanguageToggle, ThemeToggle } from "@/components";
+import { useLanguage } from "@/context";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLanguage } from "@/context/hooks/useLanguage";
-import { Menu, X } from "lucide-react";
-import { navLinks, navLinkClass } from "./navLinks";
+import { navLinkClass, navLinks } from "./navLinks";
 
-export default function MobileNav({
+export function MobileNav({
   open,
   onToggle,
   onNavigate,

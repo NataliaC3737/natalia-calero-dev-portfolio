@@ -1,4 +1,4 @@
-export default function MarginLines({ isHome }: { isHome: boolean }) {
+export function MarginLines({ isHome }: { isHome: boolean }) {
   return (
     <div className="fixed inset-0 pointer-events-none z-40">
       <div className="hidden sm:block absolute left-4 sm:left-6 md:left-8 lg:left-16 top-0 h-full w-px bg-linear-to-b from-primary/15 via-border/30 to-transparent" />

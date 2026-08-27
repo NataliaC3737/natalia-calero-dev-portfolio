@@ -111,7 +111,7 @@ export function userConfirmationTemplate(
             </td>
           </tr>
         </table>
-        <p style="margin:24px 0 0;color:${muted};font-size:12px;text-align:center;">${t.footer} natalia-calero.dev</p>
+        <p style="margin:24px 0 0;color:${muted};font-size:12px;text-align:center;">${t.footer} nataliacalero.dev</p>
       </td>
     </tr>
   </table>

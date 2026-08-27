@@ -1,4 +1,4 @@
-export default function OpenLinkIcon() {
+export function OpenLinkIcon() {
   return (
     <svg
       width="20"

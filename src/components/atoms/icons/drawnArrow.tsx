@@ -1,4 +1,4 @@
-export default function DrawnArrow() {
+export function DrawnArrow() {
   return (
     <svg
       width="55"

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-export default function NavbarBrand({
+export function NavbarBrand({
   onNavigate,
 }: {
   onNavigate?: () => void;

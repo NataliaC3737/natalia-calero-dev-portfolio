@@ -1,7 +1,6 @@
 "use client";
-import Button from "@/components/atoms/Button/Button";
-import SectionLayout from "@/components/templates/sections/SectionLayout";
-import { useLanguage } from "@/context/hooks/useLanguage";
+import { Button, SectionLayout } from "@/components";
+import { useLanguage, useMouseSpring } from "@/context";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
@@ -21,31 +20,6 @@ const itemVariants = {
     transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
-
-function useMouseSpring(
-  stiffness: number,
-  damping: number,
-  rangeX: number,
-  rangeY: number,
-) {
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-
-  useEffect(() => {
-    const handleMouse = (e: MouseEvent) => {
-      mouseX.set(e.clientX / window.innerWidth);
-      mouseY.set(e.clientY / window.innerHeight);
-    };
-    window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
-  }, [mouseX, mouseY]);
-
-  const springX = useSpring(mouseX, { stiffness, damping });
-  const springY = useSpring(mouseY, { stiffness, damping });
-  const x = useTransform(springX, [0, 1], [-rangeX, rangeX]);
-  const y = useTransform(springY, [0, 1], [-rangeY, rangeY]);
-  return { x, y };
-}
 
 const stars = [
   { x: 72, y: 12, size: 1.5, delay: 0 },

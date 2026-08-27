@@ -1,7 +1,7 @@
-import { InputProps } from "@/types/interfaces/data.interface";
+import { InputProps } from "@/types/data.interface";
 import "./input.scss";
 
-export default function Input({
+export function Input({
   name,
   label,
   type = "textField",
@@ -9,7 +9,7 @@ export default function Input({
   required = false,
   register,
   error,
-  dissabled
+  disabled
 }: InputProps) {
   const inputProps = register(name, { required });
 
@@ -26,7 +26,7 @@ export default function Input({
           {...inputProps}
           className={`input`}
           placeholder={placeholder}
-          disabled={dissabled}
+          disabled={disabled}
         />
       ) : (
         <textarea

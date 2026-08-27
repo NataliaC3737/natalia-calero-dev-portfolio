@@ -1,7 +1,7 @@
 "use client";
+import { ProjectDetailTemplate } from "@/components";
+import { useLanguage } from "@/context";
 import { useParams } from "next/navigation";
-import { useLanguage } from "@/context/hooks/useLanguage";
-import ProjectDetailTemplate from "@/components/templates/ProjectDetailTemplate/ProjectDetailTemplate";
 
 export default function ProjectDetail() {
   const { detail } = useParams();

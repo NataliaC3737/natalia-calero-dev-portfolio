@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-export default function SectionLayout({ children }: { children: ReactNode }) {
+export function SectionLayout({ children }: { children: ReactNode }) {
   return (
     <motion.section
       className="section min-h-screen overflow-y-auto relative pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-16"
