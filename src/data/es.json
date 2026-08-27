@@ -1,40 +1,55 @@
 {
   "locale": "es",
-  "nav": { "about": "Sobre mí", "projects": "Proyectos", "contact": "Contacto" },
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
   "home": {
     "greeting": "Hola, me llamo",
-    "role": "Desarrolladora full-stack e ingeniera de IA — creo experiencias web inteligentes que unen IA de vanguardia con código listo para producción.",
+    "role": "Desarrollo aplicaciones full-stack y despliego modelos de IA, siempre pensando en las personas que las usan.",
     "getInTouch": "Contáctame",
     "downloadResume": "Descargar CV"
   },
   "about": {
     "profile": "Perfil profesional",
-    "profileText": "Desarrolladora Full-stack especializada en la intersección del desarrollo web moderno (MERN stack) y la Inteligencia Artificial. Me apasiona el potencial de los datos y el desafío de optimizar y desplegar modelos avanzados de IA en aplicaciones del mundo real. Busco unirme a equipos dinámicos y trabajar en proyectos inspiradores donde pueda abordar desafíos complejos de ingeniería y construir soluciones de alto impacto.",
+    "profileText": "Desarrolladora full-stack MERN enfocada en construir aplicaciones web escalables y con gran experiencia de usuario, desplegando modelos de IA en producción. Me importa profundamente el propósito de cada proyecto — el impacto social es lo que me motiva. Técnicamente, priorizo el rendimiento, el código limpio y la resolución de problemas complejos de ingeniería. Busco un equipo donde pueda asumir la propiedad de funcionalidades y entregar software que la gente disfrute usar.",
     "journey": "Mi trayectoria",
     "education": "Formación",
-    "skills": "Habilidades e idiomas",
+    "skills": "Habilidades técnicas",
+    "softSkills": "Habilidades blandas",
+    "hobbies": "Más allá del código",
     "contact": "Contáctame",
     "experience": [
       {
         "dateRange": "04.2025 - Actualidad",
         "jobPosition": "Desarrolladora Full-stack & IA (MERN)",
-        "company": "YoTramito",
-        "description": "Desarrollo de nuevas funcionalidades con React.js, Node.js y PostgreSQL, centrándome en la refactorización constante y las mejores prácticas de código limpio. Aplicación de conocimientos avanzados de IA para integrar soluciones web innovadoras. Implementación de optimización de rendimiento, pruebas de funcionalidades y mantenimiento de flujos de trabajo en Make.com con integraciones de APIs externas.",
-        "skills": ["React", "Node.js", "PostgreSQL", "IA", "Make.com", "TypeScript"]
+        "company": "Yotramito — Madrid, España",
+        "description": "Soporte técnico a equipos internos y clientes, resolviendo incidencias e impulsando mejoras continuas en la plataforma. Desarrollo de nuevas funcionalidades con React.js, Node.js y PostgreSQL, aplicando refactorización constante y buenas prácticas de código limpio para garantizar escalabilidad y mantenibilidad. Aplicación de conocimientos avanzados de IA del Máster para integrar soluciones web innovadoras y altamente optimizadas. Implementación de técnicas de optimización de rendimiento y pruebas de funcionalidades para asegurar velocidad y estabilidad del sistema. Mantenimiento y escalado de flujos de trabajo en Make.com con integraciones de APIs externas.",
+        "skills": [
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "IA",
+          "Make.com",
+          "TypeScript"
+        ]
       },
       {
-        "dateRange": "10.2024 - 03.2025",
+        "dateRange": "10.2023 - 03.2025",
         "jobPosition": "Desarrolladora Full-stack & Web3",
-        "company": "ChangeTheBlock",
-        "description": "Desarrollé interfaces optimizadas, integré APIs de terceros y trabajé con tecnologías blockchain (Web3, smart contracts y wallets). Procesé Big Data para limpieza, análisis y visualización de datos. Diseñé y mantuve arquitecturas backend usando patrones MVC.",
-        "skills": ["React", "Next.js", "Web3", "Blockchain", "Big Data", "TypeScript"]
-      },
-      {
-        "dateRange": "10.2023 - 10.2024",
-        "jobPosition": "Desarrolladora Full-stack en prácticas",
-        "company": "ChangeTheBlock",
-        "description": "Creé aplicaciones web con React.js y Next.js, integrando APIs y desarrollando backends con Node.js y Express. Implementé autenticación segura de usuarios y diseñé interfaces intuitivas y fáciles de usar para presentar datos complejos.",
-        "skills": ["React", "Next.js", "Node.js", "Express.js", "TypeScript"]
+        "company": "ChangeTheBlock — Madrid, España",
+        "description": "Construcción de aplicaciones full-stack con React.js/Next.js (frontend) y Node.js/Express (backend MVC). Progresé de desarrolladora en prácticas a junior, asumiendo la arquitectura principal. Integración de ecosistemas Web3 (ethers.js, Smart Contracts, WalletConnect) junto con APIs REST, conectando flujos descentralizados y convencionales. Implementación de autenticación JWT/OAuth y RBAC. Diseño de interfaces intuitivas que traducen datos complejos de blockchain y financieros en dashboards accionables. Gestión de pipelines de Big Data (ETL, limpieza, procesamiento) y creación de visualizaciones dinámicas que impulsaron decisiones clave de producto. Optimización del rendimiento del backend y refactorización de código heredado, reduciendo la deuda técnica y mejorando la escalabilidad en todo el stack.",
+        "skills": [
+          "React",
+          "Next.js",
+          "Web3",
+          "Node.js",
+          "Express",
+          "Blockchain",
+          "Big Data",
+          "TypeScript"
+        ]
       }
     ],
     "educationList": [
@@ -42,71 +57,213 @@
         "dateRange": "03.2026 - 07.2026",
         "title": "Máster en IA Avanzada",
         "institution": "MIOTI, Madrid",
-        "description": "Especialización en el diseño de soluciones híbridas complejas, optimización de modelos y su puesta en producción. Inmersión profunda en IA Agentica, Deep Learning, Machine Learning, Visión por Computador, PLN, IA Generativa y Reinforcement Learning. Proyecto final integrando desarrollo web con modelos avanzados de IA.",
-        "skills": ["Deep Learning", "PLN", "Visión por Computador", "IA Generativa", "IA Agentica"]
+        "description": "Especialización en IA Agentica, Deep Learning, Visión por Computador, PLN, IA Generativa y Reinforcement Learning. Construcción de arquitecturas híbridas de IA y optimización de modelos para su puesta en producción. Desarrollo del Trabajo Fin de Máster (TFM) integrando aplicaciones web (stack MERN) con modelos avanzados de IA, tendiendo un puente entre la investigación y los productos del mundo real.",
+        "skills": [
+          "Deep Learning",
+          "PLN",
+          "Visión por Computador",
+          "IA Generativa",
+          "IA Agentica"
+        ]
       },
       {
         "dateRange": "06.2025 - 08.2025",
         "title": "Curso de IA Aplicada",
         "institution": "Ironhack, Madrid",
-        "description": "Enfoque en IA Generativa, análisis de datos y automatización de procesos con Make.com. Experiencia práctica en Power Query, ingeniería de prompts e integraciones de IA personalizadas alineadas con marcos éticos y normativas de cumplimiento.",
-        "skills": ["IA Generativa", "Ingeniería de Prompts", "Make.com", "Análisis de Datos"]
+        "description": "Aplicación de IA Generativa, análisis de datos y automatización de procesos con Make.com. Trabajo con Power Query, ingeniería de prompts e integraciones personalizadas de IA. Implementación de soluciones siguiendo marcos éticos de IA y directrices de cumplimiento normativo.",
+        "skills": [
+          "IA Generativa",
+          "Ingeniería de Prompts",
+          "Make.com",
+          "Análisis de Datos"
+        ]
       },
       {
         "dateRange": "10.2022 - 05.2024",
         "title": "Diploma Profesional en Computación & IA",
         "institution": "MSMK University, Madrid",
-        "description": "Completé un Higher National Diploma (Pearson HND) en Computación e IA, graduándome con Distinción. Adquirí una base sólida en ingeniería de software, bases de datos, desarrollo web y seguridad, explorando big data, cloud computing y machine learning.",
-        "skills": ["Ingeniería de Software", "Machine Learning", "Cloud Computing", "Big Data"]
+        "description": "Higher National Diploma (Pearson HND) con Distinción. Sólida formación en ingeniería de software, bases de datos, desarrollo web y seguridad. Exploración de big data, cloud computing y machine learning mediante proyectos de investigación y prototipado rápido. Visión integral de la tecnología, incluyendo soporte a procesos de negocio y alineación con stakeholders.",
+        "skills": [
+          "Ingeniería de Software",
+          "Machine Learning",
+          "Cloud Computing",
+          "Big Data"
+        ]
       }
     ],
-    "techStack": ["TypeScript", "React", "Node.js", "Next.js", "Express.js", "Python", "MongoDB", "PostgreSQL", "Docker", "TensorFlow", "Keras", "Azure"],
+    "techStack": [
+      "MERN Stack",
+      "React.js / Next.js",
+      "Express.js / TypeORM",
+      "GitHub / Azure DevOps",
+      "Integración IA (LLMs, LangChain)",
+      "Machine Learning (DL, PLN, CV)",
+      "Bases de datos & ETL",
+      "Docker",
+      "Automatización (Make.com)",
+      "Refactorización & Código Limpio",
+      "Figma (Prototipado UI)"
+    ],
+    "softSkillsList": [
+      "Empatía",
+      "Escucha activa",
+      "Resolución de problemas",
+      "Comunicación clara",
+      "Sentido de propiedad",
+      "Adaptabilidad"
+    ],
+    "hobbiesList": [
+      {
+        "title": "Portfolios para clientes",
+        "description": "Diseño, desarrollo y despliegue de sitios web personalizados para negocios y particulares, con el fin de mostrar y vender sus servicios. Gestionar el ciclo completo desde el diseño UI hasta el despliegue afina mis habilidades de colaboración con clientes y mi mentalidad de entrega integral."
+      },
+      {
+        "title": "Proyectos personales",
+        "description": "Construyo aplicaciones que resuelven problemas reales de mi día a día. Cada proyecto nace de una necesidad genuina y termina en una herramienta funcional, lo que me mantiene enfocada en el diseño centrado en el usuario y en resultados prácticos."
+      }
+    ],
     "spanish": "Español",
     "english": "Inglés",
     "native": "Nativo",
     "professional": "B2 (Profesional)",
-    "driversLicense": "Carné de conducir"
+    "driversLicense": "Carné de conducir",
+    "licenseLevel": "B1"
   },
   "projects": {
     "title": "Proyectos destacados",
+    "viewProject": "Ver proyecto",
     "list": [
       {
-        "image": "/projectCover.png",
-        "title": "Plataforma Web con IA — TFM",
-        "description": "Proyecto final que fusiona desarrollo web con modelos avanzados de IA. Construí una plataforma lista para producción que integra modelos de deep learning en una experiencia full-stack completa usando el stack MERN.",
+        "image": "/layout-ocr-cover.png",
+        "title": "Document Structure AI — TFM",
+        "description": "Plataforma de digitalización inteligente de documentos que combina DocLayout-YOLO para detección de estructura y TrOCR/Gemini para OCR, construida con FastAPI y React.",
         "origin": "TFM",
         "dateDeployed": "2026",
-        "links": { "web": "", "repo": "", "project": "/projects/neural-net" }
+        "links": {
+          "web": "https://document-layout-ocr-editor-drafts-490819688768.europe-west2.run.app/",
+          "repo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
+          "project": "/projects/doc-layout-ocr"
+        },
+        "detail": {
+          "description": "Plataforma integral que transforma documentos escaneados y PDFs en HTML limpio y editable, preservando fielmente la estructura visual original. El sistema utiliza un pipeline híbrido de IA que combina visión por computador local (DocLayout-YOLOv10) para la segmentación del documento y LLMs en la nube (Gemini) para el OCR semántico, asegurando que ningún componente crítico como firmas, sellos o tablas se pierda durante la reconstrucción.",
+          "techStack": [
+            "Python",
+            "FastAPI",
+            "YOLOv10",
+            "TrOCR",
+            "Gemini API",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "OpenCV",
+            "Docker",
+            "Google Cloud Run"
+          ],
+          "features": [
+            {
+              "title": "Carga por arrastrar y soltar",
+              "description": "Sube apuntes escaneados o PDFs al instante. Compatible con imágenes y documentos de varias páginas con un solo gesto de arrastrar y soltar."
+            },
+            {
+              "title": "Detección de estructura con IA",
+              "description": "DocLayout-YOLOv10 analiza la estructura visual en tiempo real, detectando títulos, párrafos, listas, tablas, logos, firmas y sellos."
+            },
+            {
+              "title": "Reconstrucción semántica a HTML",
+              "description": "La API de Gemini transcribe y estructura el documento en HTML5 limpio y accesible, preservando fielmente la jerarquía y el orden de lectura original."
+            },
+            {
+              "title": "Reconstrucción híbrida",
+              "description": "Los elementos no textuales como firmas y sellos se extraen con OpenCV y se reinsertan como Data URLs, asegurando que no se pierda nada."
+            }
+          ],
+          "roadmap": [
+            {
+              "step": "Ideación e investigación",
+              "description": "Definí el problema central — convertir apuntes manuscritos o escaneados en documentos digitales estructurados y editables. Exploré modelos de vanguardia para detección de layouts (DocLayout-YOLO) y OCR (TrOCR, Gemini)."
+            },
+            {
+              "step": "Prototipado del modelo",
+              "description": "Probé múltiples combinaciones de modelos en un notebook de Colab. Comparé variantes de YOLO, evalué TrOCR frente a Gemini en precisión de extracción de texto y refiné el pipeline de detección."
+            },
+            {
+              "step": "Integración en API",
+              "description": "Una vez que el pipeline fue estable, lo integré en un microservicio FastAPI. Añadí rasterización de PDFs (pdf2image), normalización de imágenes (Pillow/OpenCV) y prompting estructural con Gemini."
+            },
+            {
+              "step": "Desarrollo del frontend",
+              "description": "Construí una interfaz con React/Next.js que incluye carga por arrastrar y soltar, previsualización de bloques detectados en tiempo real y un panel de HTML editable. Desplegué la aplicación en Google Cloud Run."
+            },
+            {
+              "step": "Defensa del TFM",
+              "description": "Presenté el proyecto completo ante el jurado del Máster, cubriendo la arquitectura, las decisiones del pipeline y una demo en vivo de la aplicación funcionando."
+            }
+          ],
+          "reflections": "Construir un pipeline genérico de visión por computador es más difícil de lo que parece — los casos extremos se multiplican rápido: calidad de imagen variable, texto manuscrito frente a impreso, layouts complejos con múltiples columnas, millones de formatos de documento posibles. El modelo funciona bien dentro de su alcance, pero necesitaría muchos más datos de entrenamiento para generalizar. Tras presentar el proyecto, hablé con otros estudiantes que confirmaron lo útil que sería una herramienta así — algo cercano a NotebookLM pero con la digitalización consciente del layout como funcionalidad principal. Un siguiente paso evidente (que me faltó tiempo para probar) es mejorar el reconocimiento de texto manuscrito en el pipeline.",
+          "frontendRepo": "https://github.com/NataliaC3737/doc-layout-ocr-front",
+          "apiRepo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
+          "media": [
+            {
+              "image": "/layout-ocr-presentacion-TFM.png",
+              "caption": "Probando el caption de la galería durante el desarrollo"
+            },
+            {
+              "image": "/layout-ocr-prototype.png",
+              "caption": "Prototipo de la aplicación",
+              "fit": "contain"
+            },
+            {
+              "image": "/layout-ocr-prototype-2.png",
+              "caption": "Prototipo de la aplicación",
+              "fit": "contain"
+            }
+          ]
+        }
       },
       {
-        "image": "/projectCover.png",
-        "title": "YoTramito — Desarrollo de Plataforma Full-stack",
-        "description": "Desarrollé nuevas funcionalidades y proporcioné soporte técnico para una plataforma en producción usando React.js, Node.js y PostgreSQL. Enfoque en código limpio, optimización de rendimiento e integración de funcionalidades impulsadas por IA.",
+        "image": "/azajya-cover.png",
+        "title": "Azajya — Web empresarial",
+        "description": "Desarrollo integral de una web desde el diseño hasta el despliegue, integrando un CMS para que el cliente gestione sus proyectos de forma independiente.",
         "origin": "Profesional",
         "dateDeployed": "2025",
-        "links": { "web": "", "repo": "", "project": "/projects/psico-anguna" }
-      },
-      {
-        "image": "/projectCover.png",
-        "title": "dApp Blockchain — Integración Web3",
-        "description": "Desarrollé interfaces integrando tecnologías blockchain (Web3, smart contracts y wallets) en ChangeTheBlock. Procesé Big Data e implementé arquitecturas backend MVC.",
-        "origin": "Profesional",
-        "dateDeployed": "2024",
-        "links": { "web": "", "repo": "", "project": "/projects/ideas-weave" }
-      },
-      {
-        "image": "/projectCover.png",
-        "title": "Reconocimiento de Caracteres con Redes Neuronales",
-        "description": "Usando Python, Keras y TensorFlow, desarrollé una red neuronal para reconocimiento de caracteres como parte del Diploma Profesional. Investigación profunda en machine learning aplicada a desafíos del mundo real.",
-        "origin": "Universidad",
-        "dateDeployed": "2024",
-        "links": { "web": "", "repo": "", "project": "/projects/craft-mate" }
+        "links": {
+          "web": "",
+          "repo": "https://github.com/NataliaC3737/azajya",
+          "design": "https://www.figma.com/proto/9YoNu9N7G1GlUA6TFxM2sH/Azajya?node-id=19-674&t=TC68edx89acjdgc9-1&scaling=scale-down&content-scaling=fixed&page-id=19%3A673&starting-point-node-id=19%3A674",
+          "project": "/projects/azajya"
+        },
+        "detail": {
+          "status": "En fase de diseño",
+          "description": "Azajya es una empresa de andamiaje y revestimiento de fachadas con más de 30 años en el mercado y prácticamente sin huella digital. El cliente necesita una web en la que la gente pueda ver a qué se dedica la empresa y un espacio donde poder subir sus proyectos para mostrárselos a sus clientes.",
+          "roadmap": [
+            {
+              "step": "Diseño alineado a la marca y prototipo",
+              "description": "Partiendo del logo existente, estoy creando un diseño que funciona con los valores de la empresa y los colores de su branding, y construyendo un prototipo interactivo para presentárselo al cliente. El proyecto está actualmente en esta fase."
+            },
+            {
+              "step": "Validación con el cliente",
+              "description": "Validar el prototipo junto con el cliente, iterar a partir de su feedback y cerrar la dirección final del diseño."
+            },
+            {
+              "step": "Desarrollo del frontend",
+              "description": "Desarrollar el front a partir del diseño aprobado, con especial atención a la responsividad y el rendimiento."
+            },
+            {
+              "step": "Backend con CMS e integración",
+              "description": "Crear el CMS como backend independiente e integrarlo con el front, para que el cliente pueda subir y gestionar sus proyectos de forma autónoma."
+            },
+            {
+              "step": "Entrega y acompañamiento",
+              "description": "Revisar que todo encaje con las expectativas del cliente y enseñarle cómo usar el CMS para publicar sus proyectos."
+            }
+          ]
+        }
       }
     ]
   },
   "contact": {
     "title": "Conectemos",
-    "text": "Si buscas una desarrolladora para colaborar o solo quieres hablar sobre tecnología, no dudes en contactarme. Siempre estoy abierta a nuevas oportunidades y proyectos emocionantes.",
+    "text": "Si buscas una desarrolladora para colaborar o solo quieres hablar sobre tecnología, no dudes en contactarme. Siempre estoy abierta a nuevas oportunidades y proyectos interesantes.",
     "findMe": "Encuéntrame en",
     "form": {
       "fromLabel": "De",
@@ -117,7 +274,10 @@
       "subjectPlaceholder": "p.ej., Propuesta de colaboración",
       "messageLabel": "Tu mensaje",
       "messagePlaceholder": "¿En qué proyecto estás trabajando?",
-      "send": "Enviar mensaje"
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "Mensaje enviado. Revisa tu bandeja de entrada para ver la confirmación.",
+      "error": "No se pudo enviar el mensaje"
     },
     "items": {
       "email": "Email",
@@ -125,5 +285,18 @@
       "linkedin": "LinkedIn",
       "phone": "Teléfono"
     }
+  },
+  "projectDetail": {
+    "notFound": "Proyecto no encontrado",
+    "backToProjects": "Volver a proyectos",
+    "liveApp": "App en producción",
+    "design": "Diseño",
+    "frontend": "Frontend",
+    "api": "API",
+    "keyFeatures": "Características principales",
+    "howBuilt": "Proceso de desarrollo",
+    "reflections": "Reflexiones y aprendizajes",
+    "media": "Galería",
+    "techStack": "Stack tecnológico"
   }
 }
