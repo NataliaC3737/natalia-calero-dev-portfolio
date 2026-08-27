@@ -107,9 +107,15 @@ export default function HomeView() {
 
   return (
     <SectionLayout>
-      <div className="fixed inset-0 bg-linear-to-br from-primary/8 via-background to-secondary/4 pointer-events-none" />
+      <div className="fixed inset-0 bg-linear-to-br from-primary/8 via-transparent to-secondary/4 pointer-events-none" />
 
-      <div className="hidden lg:block fixed right-0 top-0 h-full w-[45%] pointer-events-none overflow-hidden">
+      <div
+        className="fixed right-0 top-0 h-full w-[45%] pointer-events-none overflow-hidden"
+        style={{
+          maskImage: "linear-gradient(to right, transparent, black 35%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 35%)",
+        }}
+      >
         <div className="absolute inset-0">
           {stars.map((s, i) => (
             <motion.div
@@ -261,6 +267,7 @@ export default function HomeView() {
             style={{
               background:
                 "linear-gradient(180deg, transparent 20%, rgba(217,107,40,0.08) 28%, transparent 35%, rgba(184,86,30,0.05) 45%, transparent 52%, rgba(106,69,50,0.06) 60%, transparent 68%, rgba(217,107,40,0.04) 75%, transparent 85%)",
+              filter: "blur(24px)",
               x: bandShift,
               rotate: bandTilt,
             }}
@@ -307,7 +314,10 @@ export default function HomeView() {
           >
             {(translations as any).home.role}
           </motion.p>
-          <motion.div className="flex flex-wrap gap-3 sm:gap-4 pt-4" variants={itemVariants}>
+          <motion.div
+            className="flex flex-wrap gap-3 sm:gap-4 pt-4"
+            variants={itemVariants}
+          >
             <Button variant="gradient" goTo="/contact" isLink>
               {(translations as any).home.getInTouch}
             </Button>
