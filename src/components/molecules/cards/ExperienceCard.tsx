@@ -26,7 +26,7 @@ export default function ExperienceCard({
         <p className="text-xs font-semibold text-primary font-afacad tracking-wide uppercase mb-2">
           {data.dateRange}
         </p>
-        <div className="flex items-baseline gap-2 mb-3">
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-3">
           <h3 className="text-lg font-bold text-brown-dark font-afacad">
             {data.jobPosition}
           </h3>

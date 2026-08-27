@@ -338,7 +338,7 @@ export default function ProjectDetailTemplate({ project }: { project: any }) {
                 className="w-full h-auto max-h-[78vh] object-contain"
               />
               {d.media[selectedMedia].caption && (
-                <p className="absolute -bottom-10 left-0 text-base text-white/95 font-afacad drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                <p className="mt-4 text-base text-white/95 font-afacad drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                   {d.media[selectedMedia].caption}
                 </p>
               )}

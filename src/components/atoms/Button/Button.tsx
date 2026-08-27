@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function Button({
   variant,
@@ -9,6 +10,8 @@ export default function Button({
   isLink,
   className,
   type = "button",
+  disabled = false,
+  loading = false,
 }: {
   variant: "primary" | "outlined" | "empty" | "gradient";
   children: ReactNode;
@@ -17,9 +20,11 @@ export default function Button({
   isLink?: boolean;
   className?: string;
   type?: "button" | "submit" | "reset" | undefined;
+  disabled?: boolean;
+  loading?: boolean;
 }) {
   const baseClasses =
-    "py-2.5 px-6 rounded-full font-afacad text-sm font-semibold tracking-wide inline-block text-center transition-all duration-200";
+    "py-2.5 px-6 rounded-full font-afacad text-sm font-semibold tracking-wide inline-flex items-center justify-center gap-2 transition-all duration-200";
 
   const variantClasses = {
     primary: "bg-primary text-white hover:bg-gradient-end shadow-md hover:shadow-lg hover:-translate-y-0.5",
@@ -40,8 +45,13 @@ export default function Button({
     );
   }
 
+  const spinner = loading && (
+    <Loader2 className="w-4 h-4 animate-spin" />
+  );
+
   return (
-    <button className={classes} onClick={onClick} type={type}>
+    <button className={classes} onClick={onClick} type={type} disabled={disabled || loading}>
+      {spinner}
       {children}
     </button>
   );

@@ -109,7 +109,7 @@ export default function HomeView() {
     <SectionLayout>
       <div className="fixed inset-0 bg-linear-to-br from-primary/8 via-background to-secondary/4 pointer-events-none" />
 
-      <div className="fixed right-0 top-0 h-full w-[45%] pointer-events-none overflow-hidden">
+      <div className="hidden lg:block fixed right-0 top-0 h-full w-[45%] pointer-events-none overflow-hidden">
         <div className="absolute inset-0">
           {stars.map((s, i) => (
             <motion.div
@@ -293,7 +293,7 @@ export default function HomeView() {
             {(translations as any).home.greeting}
           </motion.p>
           <motion.h1
-            className="text-6xl lg:text-7xl text-brown-dark font-bagel-fat-one leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-brown-dark font-bagel-fat-one leading-tight"
             variants={itemVariants}
           >
             Natalia Calero
@@ -302,12 +302,12 @@ export default function HomeView() {
             </span>
           </motion.h1>
           <motion.p
-            className="text-2xl lg:text-3xl text-brown-coffee font-afacad font-light leading-relaxed"
+            className="text-xl sm:text-2xl lg:text-3xl text-brown-coffee font-afacad font-light leading-relaxed"
             variants={itemVariants}
           >
             {(translations as any).home.role}
           </motion.p>
-          <motion.div className="flex gap-4 pt-4" variants={itemVariants}>
+          <motion.div className="flex flex-wrap gap-3 sm:gap-4 pt-4" variants={itemVariants}>
             <Button variant="gradient" goTo="/contact" isLink>
               {(translations as any).home.getInTouch}
             </Button>

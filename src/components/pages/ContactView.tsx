@@ -15,28 +15,28 @@ export default function ContactView() {
   const contactItems = [
     { icon: MailIcon, label: t.items.email, value: "caleronatalia3737@gmail.com", href: "mailto:caleronatalia3737@gmail.com" },
     { icon: GithubIcon, label: t.items.github, value: "NataliaC3737", href: "https://github.com/NataliaC3737" },
-    { icon: LinkedinIcon, label: t.items.linkedin, value: "natalia-calero-dev", href: "https://www.linkedin.com/in/natalia-calero-fern%C3%A1ndez-b54975254/" },
+    { icon: LinkedinIcon, label: t.items.linkedin, value: "natalia-calero-dev", href: "https://www.linkedin.com/in/natalia-calero-dev/" },
     { icon: PhoneIcon, label: t.items.phone, value: "+34 654 555 865", href: "tel:+34654555865" },
   ];
 
   return (
     <SectionLayout>
       <motion.div
-        className="flex flex-col gap-12"
+        className="flex flex-col gap-8 lg:gap-12"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
       >
         <div className="flex flex-col gap-4">
           <Heading gradient>{t.title}</Heading>
-          <p className="text-lg text-brown-coffee font-afacad leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-brown-coffee font-afacad leading-relaxed max-w-2xl">
             {t.text}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-3">
-            <div className="bg-surface rounded-2xl p-8 border border-border/30">
+            <div className="bg-surface rounded-2xl p-5 sm:p-8 border border-border/30">
               <ContactForm />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function ContactView() {
                   </div>
                   <div>
                     <p className="text-xs text-brown-muted font-afacad uppercase tracking-wide">{item.label}</p>
-                    <p className="text-sm font-medium text-brown-coffee font-afacad">{item.value}</p>
+                    <p className="text-sm font-medium text-brown-coffee font-afacad break-all">{item.value}</p>
                   </div>
                 </a>
               ))}

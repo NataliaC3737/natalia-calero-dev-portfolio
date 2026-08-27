@@ -5,6 +5,7 @@ import { IProject } from "@/types/interfaces/data.interface";
 import Image from "next/image";
 import { ArrowRightIcon, ExternalLinkIcon, CalendarIcon, BookmarkIcon } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/context/hooks/useLanguage";
 
 export default function ProjectCard({
   data,
@@ -13,6 +14,8 @@ export default function ProjectCard({
   data: IProject;
   index?: number;
 }) {
+  const { translations } = useLanguage();
+  const t = (translations as any).projects;
   return (
     <motion.div
       className="group bg-surface rounded-2xl overflow-hidden border border-border/40 hover:border-primary/30 transition-colors duration-300"
@@ -64,7 +67,7 @@ export default function ProjectCard({
           className="mt-auto font-afacad text-sm font-semibold text-primary flex items-center gap-2 hover:gap-3 transition-all"
           href={data.links.project}
         >
-          View project
+          {t.viewProject}
           <ArrowRightIcon className="w-4 h-4" />
         </Link>
       </div>
