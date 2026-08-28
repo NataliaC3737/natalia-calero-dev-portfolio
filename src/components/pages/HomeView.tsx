@@ -28,7 +28,7 @@ const stars = [
   { x: 92, y: 78, size: 0.8, delay: 4.5 },
   { x: 65, y: 65, size: 1, delay: 2 },
   { x: 85, y: 40, size: 0.7, delay: 5 },
-];
+]; 
 
 export default function HomeView() {
   const { translations } = useLanguage();
@@ -295,7 +295,12 @@ export default function HomeView() {
             <Button variant="gradient" goTo="/contact" isLink>
               {(translations as any).home.getInTouch}
             </Button>
-            <Button variant="outlined">
+            <Button
+              variant="outlined"
+              goTo={`cv/CV_Natalia_Calero_Fernandez_A26_${(translations as any).locale.toUpperCase()}.pdf`}
+              download
+              isLink
+            >
               {(translations as any).home.downloadResume}
             </Button>
           </motion.div>
