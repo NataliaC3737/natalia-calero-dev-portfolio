@@ -12,6 +12,7 @@ export function Button({
   type = "button",
   disabled = false,
   loading = false,
+  download = false,
 }: {
   variant: "primary" | "outlined" | "empty" | "gradient";
   children: ReactNode;
@@ -22,6 +23,7 @@ export function Button({
   type?: "button" | "submit" | "reset" | undefined;
   disabled?: boolean;
   loading?: boolean;
+  download?: boolean;
 }) {
   const baseClasses =
     "py-2.5 px-6 rounded-full font-afacad text-sm font-semibold tracking-wide inline-flex items-center justify-center gap-2 transition-all duration-200";
@@ -39,7 +41,7 @@ export function Button({
 
   if (isLink && goTo) {
     return (
-      <Link href={goTo} className={classes}>
+      <Link href={goTo} className={classes} download={download}>
         {children}
       </Link>
     );
