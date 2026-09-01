@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { ContactView } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Get in touch",
+  title: "Contacto",
   description:
-    "Contact Natalia Calero Fernández — full-stack MERN developer & AI engineer. Open to freelance projects, collaborations, and opportunities in web development and AI.",
+    "Contacta con Natalia Calero Fernández — desarrolladora full-stack MERN e ingeniera de IA. Abierta a proyectos freelance, colaboraciones y nuevas oportunidades.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function Contact() {

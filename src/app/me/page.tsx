@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { AboutMeView } from "@/components";
 
 export const metadata: Metadata = {
-  title: "About me",
+  title: "Sobre mí",
   description:
-    "Professional profile of Natalia Calero Fernández: full-stack MERN developer, AI engineer, and Web3 experience. Explore her journey, education, and technical skills.",
+    "Perfil profesional de Natalia Calero Fernández: desarrolladora full-stack MERN, ingeniera de IA y experiencia Web3. Conoce su trayectoria, formación y habilidades técnicas.",
+  alternates: {
+    canonical: "/me",
+  },
 };
 
 export default function Me() {

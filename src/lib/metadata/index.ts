@@ -1,27 +1,33 @@
 import type { Metadata, Viewport } from "next";
 
 const SITE_NAME = "Natalia Calero Dev";
-const SITE_URL = "https://nataliacalero.dev";
+const SITE_URL = "https://natalia-calero.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Full-stack Developer & AI Engineer`,
+    default: `${SITE_NAME} — Desarrolladora Full-Stack & Ingeniera de IA`,
     template: `%s — ${SITE_NAME}`,
   },
   description:
-    "Portfolio of Natalia Calero Fernández, full-stack MERN developer & AI engineer based in Madrid. I build polished, intuitive web apps, deploy AI models to production, and focus on performance, clean code, and high-impact products.",
+    "Portfolio de Natalia Calero Fernández, desarrolladora full-stack MERN e ingeniera de IA en Madrid. Construyo aplicaciones web pulidas e intuitivas, despliego modelos de IA en producción y priorizo el rendimiento, el código limpio y los productos de alto impacto.",
   keywords: [
     "Natalia Calero",
+    "desarrolladora full-stack",
+    "desarrolladora MERN",
+    "ingeniera de IA",
     "full-stack developer",
-    "MERN developer",
     "AI engineer",
     "React",
     "Next.js",
     "Node.js",
+    "TypeScript",
+    "MongoDB",
+    "PostgreSQL",
+    "Machine Learning",
     "portfolio",
     "Madrid",
-    "freelance developer",
+    "desarrolladora freelance",
   ],
   authors: [
     {
@@ -30,24 +36,24 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Natalia Calero Fernández",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Full-stack Developer & AI Engineer`,
+    title: `${SITE_NAME} — Desarrolladora Full-Stack & Ingeniera de IA`,
     description:
-      "Full-stack MERN developer & AI engineer. I build polished, intuitive web apps, deploy AI models to production, and care about performance, clean code, and social impact.",
+      "Desarrolladora full-stack MERN e ingeniera de IA. Construyo aplicaciones web pulidas e intuitivas, despliego modelos de IA en producción y cuido el rendimiento, el código limpio y el impacto social.",
     locale: "es_ES",
     alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary",
-    title: `${SITE_NAME} — Full-stack Developer & AI Engineer`,
+    title: `${SITE_NAME} — Desarrolladora Full-Stack & Ingeniera de IA`,
     description:
-      "Full-stack MERN developer & AI engineer building polished, intuitive software.",
+      "Desarrolladora full-stack MERN e ingeniera de IA construyendo software pulido e intuitivo.",
+  },
+  icons: {
+    icon: "/logo.svg",
   },
   robots: {
     index: true,

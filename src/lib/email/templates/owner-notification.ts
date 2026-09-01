@@ -59,7 +59,7 @@ export function ownerNotificationTemplate(
                     <span style="display:inline-block;background:${primary};color:${white};font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:20px;">${t.badge}</span>
                   </td>
                   <td align="right">
-                    <span style="color:${muted};font-size:12px;">nataliacalero.dev</span>
+                    <span style="color:${muted};font-size:12px;">natalia-calero.dev</span>
                   </td>
                 </tr>
               </table>
@@ -107,7 +107,7 @@ export function ownerNotificationTemplate(
             </td>
           </tr>
         </table>
-        <p style="margin:24px 0 0;color:${muted};font-size:12px;text-align:center;">${t.footer} nataliacalero.dev</p>
+        <p style="margin:24px 0 0;color:${muted};font-size:12px;text-align:center;">${t.footer} natalia-calero.dev</p>
       </td>
     </tr>
   </table>

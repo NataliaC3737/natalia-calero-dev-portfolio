@@ -2,9 +2,13 @@ import { HomeView } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title:
+    "Desarrolladora Full-Stack & Ingeniera de IA en Madrid — Natalia Calero",
   description:
-    "Natalia Calero Fernández — full-stack MERN developer & AI engineer. I build full-stack apps, deploy AI models, and care deeply about the people who use them.",
+    "Portfolio de Natalia Calero, desarrolladora full-stack MERN e ingeniera de IA en Madrid. Especializada en aplicaciones web, despliegue de modelos de IA en producción y desarrollo con impacto social.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {
