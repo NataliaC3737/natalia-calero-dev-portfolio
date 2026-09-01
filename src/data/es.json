@@ -134,7 +134,7 @@
     "viewProject": "Ver proyecto",
     "list": [
       {
-        "image": "/layout-ocr-cover.png",
+        "image": "/projects/layout-ocr-cover.png",
         "title": "Document Structure AI — TFM",
         "description": "Plataforma de digitalización inteligente de documentos que combina DocLayout-YOLO para detección de estructura y TrOCR/Gemini para OCR, construida con FastAPI y React.",
         "origin": "TFM",
@@ -204,16 +204,16 @@
           "apiRepo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
           "media": [
             {
-              "image": "/layout-ocr-presentacion-TFM.png",
+              "image": "/projects/layout-ocr-presentacion-TFM.png",
               "caption": "Defensa del TFM ante el tribunal académico. MIOTI, 2026."
             },
             {
-              "image": "/layout-ocr-prototype.png",
+              "image": "/projects/layout-ocr-prototype.png",
               "caption": "Prototipo de la aplicación",
               "fit": "contain"
             },
             {
-              "image": "/layout-ocr-prototype-2.png",
+              "image": "/projects/layout-ocr-prototype-2.png",
               "caption": "Prototipo de la aplicación",
               "fit": "contain"
             }
@@ -221,7 +221,7 @@
         }
       },
       {
-        "image": "/azajya-cover.png",
+        "image": "/projects/azajya-cover.png",
         "title": "Azajya — Web empresarial",
         "description": "Desarrollo integral de una web desde el diseño hasta el despliegue, integrando un CMS para que el cliente gestione sus proyectos de forma independiente.",
         "origin": "Profesional",

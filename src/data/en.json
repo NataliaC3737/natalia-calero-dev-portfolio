@@ -134,7 +134,7 @@
     "viewProject": "View project",
     "list": [
       {
-        "image": "/layout-ocr-cover.png",
+        "image": "/projects/layout-ocr-cover.png",
         "title": "Document Structure AI — Master's Thesis",
         "description": "Intelligent document digitisation platform combining DocLayout-YOLO for layout detection and TrOCR/Gemini for OCR, built with FastAPI and React.",
         "origin": "TFM",
@@ -204,16 +204,16 @@
           "apiRepo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
           "media": [
             {
-              "image": "/layout-ocr-presentacion-TFM.png",
+              "image": "/projects/layout-ocr-presentacion-TFM.png",
               "caption": "Presentation of the Master's Thesis (TFM) project before the academic tribunal. MIOTI, 2026."
             },
             {
-              "image": "/layout-ocr-prototype.png",
+              "image": "/projects/layout-ocr-prototype.png",
               "caption": "App prototype",
               "fit": "contain"
             },
             {
-              "image": "/layout-ocr-prototype-2.png",
+              "image": "/projects/layout-ocr-prototype-2.png",
               "caption": "App prototype",
               "fit": "contain"
             }
@@ -221,7 +221,7 @@
         }
       },
       {
-        "image": "/azajya-cover.png",
+        "image": "/projects/azajya-cover.png",
         "title": "Azajya — Business Website",
         "description": "Full-cycle website development from design to deployment, including a CMS for the client to manage their project listings independently.",
         "origin": "Professional",
