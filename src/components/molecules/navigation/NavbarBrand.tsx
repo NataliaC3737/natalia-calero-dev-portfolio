@@ -1,4 +1,5 @@
 "use client";
+import { useLanguage } from "@/context/hooks/useLanguage";
 import Link from "next/link";
 
 export function NavbarBrand({
@@ -6,9 +7,11 @@ export function NavbarBrand({
 }: {
   onNavigate?: () => void;
 }) {
+  const { localize } = useLanguage();
+
   return (
     <Link
-      href={"/"}
+      href={localize("/")}
       className="flex items-center gap-2.5 group"
       onClick={onNavigate}
     >

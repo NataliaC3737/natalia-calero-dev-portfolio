@@ -16,7 +16,7 @@ export function MobileNav({
   onNavigate: () => void;
 }) {
   const currentPath = usePathname();
-  const { translations } = useLanguage();
+  const { translations, localize } = useLanguage();
   const nav = (translations as any).nav;
 
   return (
@@ -32,16 +32,19 @@ export function MobileNav({
       {open && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col">
-            {navLinks.map(({ href, labelKey }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`${navLinkClass(href, currentPath)} py-3`}
-                onClick={onNavigate}
-              >
-                {nav[labelKey]}
-              </Link>
-            ))}
+            {navLinks.map(({ href, labelKey }) => {
+              const localized = localize(href);
+              return (
+                <Link
+                  key={href}
+                  href={localized}
+                  className={`${navLinkClass(localized, currentPath)} py-3`}
+                  onClick={onNavigate}
+                >
+                  {nav[labelKey]}
+                </Link>
+              );
+            })}
             <div className="flex items-center gap-3 pt-3 mt-1 border-t border-border/40">
               <LanguageToggle />
               <ThemeToggle />

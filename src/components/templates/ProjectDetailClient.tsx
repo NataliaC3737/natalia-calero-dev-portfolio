@@ -1,14 +1,10 @@
 "use client";
-import { ProjectDetailTemplate } from "@/components";
+import { ProjectDetailTemplate } from "@/components/templates/ProjectDetailTemplate";
 import { useLanguage } from "@/context";
-import { useParams } from "next/navigation";
 
-export default function ProjectDetail() {
-  const { detail } = useParams();
+export function ProjectDetailClient({ detail }: { detail: string }) {
   const { translations } = useLanguage();
-
   const projects = (translations as any).projects.list;
-
   const project = projects?.find(
     (p: any) => p.links?.project === `/projects/${detail}`,
   );

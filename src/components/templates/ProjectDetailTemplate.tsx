@@ -17,7 +17,7 @@ const fadeUp = {
 };
 
 export function ProjectDetailTemplate({ project }: { project: any }) {
-  const { translations } = useLanguage();
+  const { translations, localize } = useLanguage();
   const t = (translations as any).projectDetail;
   const [selectedMedia, setSelectedMedia] = useState<number | null>(null);
 
@@ -37,7 +37,7 @@ export function ProjectDetailTemplate({ project }: { project: any }) {
             {t.notFound}
           </h1>
           <Link
-            href="/projects"
+            href={localize("/projects")}
             className="text-primary font-afacad text-sm hover:underline"
           >
             ← {t.backToProjects}
@@ -58,7 +58,7 @@ export function ProjectDetailTemplate({ project }: { project: any }) {
         transition={{ duration: 0.3 }}
       >
         <Link
-          href="/projects"
+          href={localize("/projects")}
           className="inline-flex items-center gap-2 text-sm text-brown-muted font-afacad hover:text-brown-coffee transition-colors mb-10"
         >
           <ArrowLeft className="w-4 h-4" />

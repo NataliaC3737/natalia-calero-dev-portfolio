@@ -31,7 +31,7 @@ const stars = [
 ]; 
 
 export default function HomeView() {
-  const { translations } = useLanguage();
+  const { translations, localize } = useLanguage();
 
   // Planet
   const planetSpring = useMouseSpring(120, 25, 4, 3);
@@ -292,42 +292,18 @@ export default function HomeView() {
             className="flex flex-wrap gap-3 sm:gap-4 pt-4"
             variants={itemVariants}
           >
-            <Button variant="gradient" goTo="/contact" isLink>
+            <Button variant="gradient" goTo={localize("/contact")} isLink>
               {(translations as any).home.getInTouch}
             </Button>
             <Button
               variant="outlined"
-              goTo={`cv/CV_Natalia_Calero_Fernandez_A26_${(translations as any).locale.toUpperCase()}.pdf`}
+              goTo={`/cv/CV_Natalia_Calero_Fernandez_A26_${(translations as any).locale.toUpperCase()}.pdf`}
               download
               isLink
             >
               {(translations as any).home.downloadResume}
             </Button>
           </motion.div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-col gap-3 py-6 relative"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-lg sm:text-xl text-brown-coffee font-afacad font-bold tracking-wide uppercase">
-          {(translations as any).home.skillsTitle}
-        </h2>
-        <div className="flex flex-wrap gap-2">
-          {((translations as any).home.skills ?? []).map(
-            (skill: string, index: number) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-surface text-sm font-medium text-brown-coffee font-afacad rounded-full border border-border/40 hover:border-primary/40 hover:bg-primary/5 transition-colors duration-200"
-              >
-                {skill}
-              </span>
-            ),
-          )}
         </div>
       </motion.div>
     </SectionLayout>

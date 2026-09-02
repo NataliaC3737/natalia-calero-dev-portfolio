@@ -1,7 +1,14 @@
 import type { Metadata, Viewport } from "next";
 
-const SITE_NAME = "Natalia Calero Dev";
-const SITE_URL = "https://natalia-calero.dev";
+export const SITE_NAME = "Natalia Calero Dev";
+export const SITE_URL = "https://natalia-calero.dev";
+
+const OG_IMAGE = {
+  url: "/projects/layout-ocr-cover.webp",
+  width: 1200,
+  height: 630,
+  alt: "Natalia Calero Dev — Desarrolladora Full-Stack & Ingeniera de IA",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,12 +52,14 @@ export const metadata: Metadata = {
       "Desarrolladora full-stack MERN e ingeniera de IA. Construyo aplicaciones web pulidas e intuitivas, despliego modelos de IA en producción y cuido el rendimiento, el código limpio y el impacto social.",
     locale: "es_ES",
     alternateLocale: ["en_US"],
+    images: [OG_IMAGE],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${SITE_NAME} — Desarrolladora Full-Stack & Ingeniera de IA`,
     description:
       "Desarrolladora full-stack MERN e ingeniera de IA construyendo software pulido e intuitivo.",
+    images: [OG_IMAGE],
   },
   icons: {
     icon: "/logo.svg",

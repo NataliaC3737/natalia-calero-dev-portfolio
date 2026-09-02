@@ -1,26 +1,19 @@
 "use client";
 import { MarginLines, Navbar } from "@/components";
-import { LanguageProvider, ThemeProvider, useLanguage } from "@/context";
+import { LanguageProvider, ThemeProvider } from "@/context";
+import { stripLocale } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { Toaster } from "sonner";
-
-function LangSync() {
-  const { language } = useLanguage();
-  useEffect(() => {
-    document.documentElement.lang = language === "EN" ? "en" : "es";
-  }, [language]);
-  return null;
-}
 
 export default function Providers({ children }: { children: ReactNode }) {
   const currentPath = usePathname();
+  const isHome = stripLocale(currentPath) === "/";
 
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <LangSync />
-        <MarginLines isHome={currentPath === "/"} />
+        <MarginLines isHome={isHome} />
         <Navbar />
         {children}
         <Toaster richColors position="bottom-right" />

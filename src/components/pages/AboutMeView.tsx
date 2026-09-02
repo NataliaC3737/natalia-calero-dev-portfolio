@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function AboutMeView() {
-  const { translations } = useLanguage();
+  const { translations, localize } = useLanguage();
   const t = (translations as any).about;
 
   return (
@@ -30,7 +30,7 @@ export default function AboutMeView() {
             {t.profileText}
           </p>
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4">
-            <Button variant="gradient" goTo="/contact" isLink>
+            <Button variant="gradient" goTo={localize("/contact")} isLink>
               {t.contact}
             </Button>
             <div className="flex gap-4">

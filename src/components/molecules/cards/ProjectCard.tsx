@@ -19,7 +19,7 @@ export function ProjectCard({
   data: IProject;
   index?: number;
 }) {
-  const { translations } = useLanguage();
+  const { translations, localize } = useLanguage();
   const t = (translations as any).projects;
   return (
     <motion.div
@@ -32,7 +32,7 @@ export function ProjectCard({
       <div className="relative h-48 overflow-hidden bg-linear-to-br from-warm-glow to-surface">
         <Image
           src={data.image}
-          alt=""
+          alt={data.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
@@ -76,7 +76,7 @@ export function ProjectCard({
         </p>
         <Link
           className="mt-auto font-afacad text-sm font-semibold text-primary flex items-center gap-2 hover:gap-3 transition-all"
-          href={data.links.project}
+          href={localize(data.links.project)}
         >
           {t.viewProject}
           <ArrowRightIcon className="w-4 h-4" />

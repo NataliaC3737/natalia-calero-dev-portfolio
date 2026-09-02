@@ -9,20 +9,7 @@
     "greeting": "Hi, my name is",
     "role": "I build full-stack apps, deploy AI models, and care deeply about the people who use them.",
     "getInTouch": "Get in touch",
-    "downloadResume": "Download Resume",
-    "skillsTitle": "What I work with",
-    "skills": [
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "MongoDB",
-      "PostgreSQL",
-      "Python",
-      "Machine Learning",
-      "Docker",
-      "Git"
-    ]
+    "downloadResume": "Download Resume"
   },
   "about": {
     "profile": "Professional profile",
@@ -147,7 +134,7 @@
     "viewProject": "View project",
     "list": [
       {
-        "image": "/projects/layout-ocr-cover.png",
+        "image": "/projects/layout-ocr-cover.webp",
         "title": "Document Structure AI — Master's Thesis",
         "description": "Intelligent document digitisation platform combining DocLayout-YOLO for layout detection and TrOCR/Gemini for OCR, built with FastAPI and React.",
         "origin": "TFM",
@@ -217,16 +204,16 @@
           "apiRepo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
           "media": [
             {
-              "image": "/projects/layout-ocr-presentacion-TFM.png",
+              "image": "/projects/layout-ocr-presentacion-TFM.webp",
               "caption": "Presentation of the Master's Thesis (TFM) project before the academic tribunal. MIOTI, 2026."
             },
             {
-              "image": "/projects/layout-ocr-prototype.png",
+              "image": "/projects/layout-ocr-prototype.webp",
               "caption": "App prototype",
               "fit": "contain"
             },
             {
-              "image": "/projects/layout-ocr-prototype-2.png",
+              "image": "/projects/layout-ocr-prototype-2.webp",
               "caption": "App prototype",
               "fit": "contain"
             }
@@ -234,7 +221,7 @@
         }
       },
       {
-        "image": "/projects/azajya-cover.png",
+        "image": "/projects/azajya-cover.webp",
         "title": "Azajya — Business Website",
         "description": "Full-cycle website development from design to deployment, including a CMS for the client to manage their project listings independently.",
         "origin": "Professional",

@@ -9,20 +9,7 @@
     "greeting": "Hola, me llamo",
     "role": "Desarrollo aplicaciones full-stack y despliego modelos de IA, siempre pensando en las personas que las usan.",
     "getInTouch": "Contáctame",
-    "downloadResume": "Descargar CV",
-    "skillsTitle": "Con lo que trabajo",
-    "skills": [
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "MongoDB",
-      "PostgreSQL",
-      "Python",
-      "Machine Learning",
-      "Docker",
-      "Git"
-    ]
+    "downloadResume": "Descargar CV"
   },
   "about": {
     "profile": "Perfil profesional",
@@ -147,7 +134,7 @@
     "viewProject": "Ver proyecto",
     "list": [
       {
-        "image": "/projects/layout-ocr-cover.png",
+        "image": "/projects/layout-ocr-cover.webp",
         "title": "Document Structure AI — TFM",
         "description": "Plataforma de digitalización inteligente de documentos que combina DocLayout-YOLO para detección de estructura y TrOCR/Gemini para OCR, construida con FastAPI y React.",
         "origin": "TFM",
@@ -217,16 +204,16 @@
           "apiRepo": "https://github.com/NataliaC3737/doc-layout-ocr-api",
           "media": [
             {
-              "image": "/projects/layout-ocr-presentacion-TFM.png",
+              "image": "/projects/layout-ocr-presentacion-TFM.webp",
               "caption": "Defensa del TFM ante el tribunal académico. MIOTI, 2026."
             },
             {
-              "image": "/projects/layout-ocr-prototype.png",
+              "image": "/projects/layout-ocr-prototype.webp",
               "caption": "Prototipo de la aplicación",
               "fit": "contain"
             },
             {
-              "image": "/projects/layout-ocr-prototype-2.png",
+              "image": "/projects/layout-ocr-prototype-2.webp",
               "caption": "Prototipo de la aplicación",
               "fit": "contain"
             }
@@ -234,7 +221,7 @@
         }
       },
       {
-        "image": "/projects/azajya-cover.png",
+        "image": "/projects/azajya-cover.webp",
         "title": "Azajya — Web empresarial",
         "description": "Desarrollo integral de una web desde el diseño hasta el despliegue, integrando un CMS para que el cliente gestione sus proyectos de forma independiente.",
         "origin": "Profesional",
